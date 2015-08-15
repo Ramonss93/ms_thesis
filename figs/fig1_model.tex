@@ -1,0 +1,41 @@
+\begin{figure}
+\begin{center}
+	\tikzstyle{State}=[circle,
+		thick,
+		minimum size = 1.2cm,
+		inner sep =5pt,
+		draw=black,
+		fill=black!40]
+
+	\begin{tikzpicture}[->,>=stealth',auto,scale=0.60]
+		\node [circle,State] (M) at (0,0) {M};
+		\node [circle,State] (B) at (-8,5) {B};
+		\node [circle,State] (T) at (8,5) {T};
+		\node [circle,State] (R) at (0,10) {R};
+
+		\path	(M) edge [thick,loop below,-latex]  node {} (M);
+		\path	(T) edge [thick,loop right,-latex]  node {} (T);
+		\path	(B) edge [thick,loop left,-latex]  node {} (B);
+		\path	(R) edge [thick,loop above,-latex]  node {} (R);
+
+		\draw[thick,-latex] (M) to node[above,sloped] {$\theta (1-\theta_T)(1-\epsilon)$} (B);
+		\draw[thick,-latex] (B) to[bend right=25] node[below,sloped] {$\beta_T  (T+M)(1-\epsilon) $} (M);
+
+		\draw[thick,-latex] (T) to[bend left=25] node[below,sloped] {$\beta_B(B+M)(1-\epsilon)$} (M);
+		\draw[thick,-latex] (M) to node[above,sloped] {$\theta \cdot \theta_T (1-\epsilon)$} (T);
+
+		\draw[thick,-latex] (R) to[bend left=25] node[above,sloped] {$\alpha_T(T+M)[1-\alpha_B(B+M)]$} (T);
+		\draw[thick,-latex] (T) to node[below,sloped] {$\epsilon$} (R);
+
+		\draw[thick,-latex] (R) to[bend right=25] node[above,sloped] {$\alpha_B(B+M)[1-\alpha_T(T+M)]$} (B);
+		\draw[thick,-latex] (B) to node[below,sloped] {$\epsilon$} (R);
+
+		\draw[thick,-latex,transform canvas={xshift=0.8ex}] (R) to node[above,sloped] {$\alpha_B(M + B) \cdot \alpha_T(M + T)$} (M);
+		\draw[thick,-latex,transform canvas={xshift=-0.8ex}] (M) to node[above,sloped] {$\epsilon$} (R);
+	\end{tikzpicture}
+\end{center}
+
+\caption{The states and transitions model illustrating all states and possible transition in the boreal-temperate forest system. B, T, M and R respectively mean; Boreal, Temperate, Mixed and Regeneration. Each arrow represent a transition between state.}
+\label{fig1}
+
+\end{figure}
