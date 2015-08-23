@@ -8,44 +8,60 @@
 
 \section{Introduction}
 
-Most studies use species distribution models to predict impact of climate change on future species distribution range.  models are inappropriate to study migration rate because they lead to instantaneous vegetation responses.
+Species distribution models (SDMs) are one of the most popular tool to predict impact of climate change on species geographical range \cite{Iverson2002}. Predict forest species range shift under climate change is limited as trees are sessile, long-lived and slow to mature \cite{Lenoir2014a} while SDMs based on correlative methods predict instantaneous vegetation responses; therefore species migration rates are often overestimated using this approach. Integrate ecological processes using process based-model are primordial to improve this prediction \cite{Snell2014a}.  Strong biotic interaction, slow demography and dispersal limitation can conduct to local extinction or prevent species colonization at the leading edge of the species distribution (Source). These ecological mechanisms could limit species spread rate over the forest landscape and could explain why many individual species are failure to migrate \cite{Zhu2012}.
 
-%Un paragraph sur les modèles actuellement disponible pour prédire la distribution future des espèces. Une phrase sur le fait que les modèeles actuelles ne s'accordent pas sur l'expansion ou la contraction de certaines espèces sensibles aux CC. L'approche par communauté permet de gommer cette variabilité dans la réponses et de d'intéresser davantage aux mécanismes moteurs de la réponses au changements climatiques. Il offre d'augmenter l'intertie du système pour y detecter les mécanismes fondateurs.
+% Paragraphe sur l'implication de mesurer la tension accumuler
+Lead unpace with bioclimatic niche
+Increase tension
+Lead to catastrophic shift with management scenario
+
+% Conclusion: Even if the SDM model provide usefull information such as the species distribution at equilibrium with abiotic condition, the real challenge subsist in predicting if the species will reach this equilibrium and if not what is the main meachnisms limiting his own migration.
+
+% Paragraphe sur l'ecotone Tempérée-Boréal
+
+% Trouver Snell 2011
+
+In this present study, we investigated the range shift and migration rate of the temperate forest at his ecotone using a states and transitions model.   We simulated the ecotone dynamic using different versions of the state and transition model over different climate change scenarios (RCP 8.5, AR5). We compared the models outputs to assess which ecological processes - dispersion,  demography, propagule effect and biotic interaction - are limiting or increasing the migration ability of the temperate forest.
+
+
+
+%Justifier le besoin de l'approche par communauté et le besoin d'intégrer processus démographique, dispersion, spatial dynamics
+
+%Multispecies extension of spatial population model
+
+
+% L'approche par communauté permet de gommer cette variabilité dans la réponses et de d'intéresser davantage aux mécanismes moteurs de la réponses au changements climatiques. Il offre d'augmenter l'intertie du système pour y detecter les mécanismes fondateurs.
 
 %The demography, the limited dispersion of temperate species and the spatial dynamics are delaying the temperate forest migration.
 
-%J'ai besoin de définir ce que c'est que la dynamique spatiale de la forêt tempérée.
-
-\textit{\lipsum[1]}
+%J'ai besoin de définir ce que c'est que la dynamique spatiale de la forêt tempérée ()
 
 \section{Methods}
 
 The temperate-boreal forests ecotone can be seen at the landscape scale as a
 macro-mosaic filled by three different forest stand patches; Boreal stand
-dominated by coniferous species, Temperate stand dominated by broadleaf species
-and finally Mixed stand as a mid-succesionnal patch. In the first section, we
-present how we collected and classified forest plots surveys into those three
-regional forest biomes and how we linked the climatic data with the plot location. In the second section, we described the model allowing us to simulate the dynamic of the boreal-temperate forest ecotone and then focused on the model calibration. In the last section, we explained the simulation plan and the different model versions we ran to assess which ecological mechanisms constrains the migration rate of the temperate forest.
+dominated by coniferous species, Temperate stand dominated by broadleaf
+species and finally Mixed stand as a mid-succesionnal patch \cite{Goldblum2010}. In the first section, we present how we collected and classified forest plots surveys into those three regional forest biomes and how we linked the climatic data with the plot location. In the second section, we described the model allowing us to simulate the dynamic of the boreal-temperate forest ecotone and then focused on the model calibration. In the last section, we explained the simulation plan and the different model versions we ran to assess which ecological mechanisms constrains the migration rate of the temperate forest.
 
-\subsection{Plot surveys into community patches}
+\subsection{Data}
 
-\subsubsection{Forest Inventory databases}
+\subsubsection{Classifying forest plot surveys}
 
 We used 4 forest inventory databases widely distributed in Eastern North
-America, from West-Virginia (US) to Quebec (CAN) (include plots distribution and
-study area in figs). We selected N plot surveys located at the boreal temperate
-ecotone (\textit{add coordinates of the study area}) and then classify each plot
-measurement in the four states following the species composition. \textit{add
-description on measurements}. A forest state is defined as mature stand
-characterized by a specific species community which is the result of the local
-climatic conditions.
+America, from West-Virginia (US) to Quebec (CAN) (include plots distribution
+and study area in figs). We selected N plot surveys located at the boreal
+temperate ecotone (\textit{add coordinates of the study area}) and then
+classify each plot measurement in the four states following the species
+composition. \textit{add description on measurements}. A forest state is
+defined as mature stand characterized by a specific species community which is
+the result of the local climatic conditions.
+
 % Ajouter les implications d'une telle forme de classification. De la pure écologie forestière vue par Cléments.
 
 
 In our case, the temperate community consists of 8 different species
 (\textit{full species list}) and the boreal community 7 species (\textit{
-species list}). If one those species is present in the stand, then the patch is
-classified as a mixed state.
+species list}). If both species types are present then the patch is classified as a mixed state.
 
 We filtered out all trees with diameter at breast height lesser than 12,7 cm.
 
@@ -75,22 +91,22 @@ Then we computed a transition matrix within N states transition occurred between
 %Supplementary  materials: US data are provided by the Forest Inventory and Analysis National Program and included 86.0000 forest plots standardized since 1990 and monitored until 2013 with up to 4 measurements by forest plot. Quebec data are provided from the Ministère des Forêts de la Faune et des Parcs with 12.409 permanent plots and DOMTAR, a forest company in paper production with 1.741 plots. Quebec plots surveys started in 1960 until 2011 with up to 10 measurements. Ontario and New-Brunswick included 1.038 and 2.748 plots respectively. Ontario monitored forest plots since 1992 until 2006 with up to 3 measurement, and New-Brunswick since 1985 to 2010 with up to 7 measurements.
 
 
-\subsubsection{Climatic database}
+\subsubsection{Linking abiotic conditions}
 
 \textit{\lipsum[1]}
 
-%For each plot location, we extract the climate of the last 15 years previous the year of measurement, soil and slope. 
+%For each plot location, we extract the climate of the last 15 years previous the year of measurement, soil and slope.
 
 \subsection{The states and transitions model approach}
 
 \subsubsection{Model description}
 
 To reproduce and simulate the dynamic of this ecotone, we used a state and
-transition model as a patch occupancy model \cite{Leibold2004}. We incorporated  the three different forest stand types as states: Boreal (B), Temperate (T), Mixed (M) (Fig. \ref{fig1}).  The disturbance regime is one of the important component of this natural system dynamic \cite{Vanderwel2014}; consequently, we added the regeneration state (R, Fig. \ref{fig1}) to represent a post-disturbance stand.
+transition model as a patch occupancy model \cite{Leibold2004}. We incorporated  the three different forest stand types as states: Boreal (B), Temperate (T), Mixed (M) (Fig. \ref{fig1}).  The disturbance regime is one of the important component of this natural system dynamic \cite{Bergeron2004,Vanderwel2014}; consequently, we added the regeneration state (R, Fig. \ref{fig1}) to represent a post-disturbance stand.
 
 \input{figs/fig1_model.tex}
 
-Among the states, transitions occur by demographic
+Among the states, transitions occur by ecological
 processes and are formulated in the present model as a transition probability. All transitions between states are possible except the direct transition between a temperate and boreal stand, which requires an intermediate step through the state mixed.
 
 Boreal patch is converted as a mixed patch by colonization rate ($\beta_T$, fig. \ref{fig1}) of temperate species. This colonization rate depends on the proportion of temperate species propagules present in the neighbors ($T+M$) but also the probability of the patch to be none-disturbed ($1 - \epsilon$). Hence, transition of boreal patches toward mixed patches can be formulated as $\beta_T \cdot (T+M) \cdot (1-\epsilon)$. Then, a mixed patch can transfer to a pure temperate patch by competitive exclusion of boreal species ($\theta_T$, Fig. \ref{fig1}). When a disturbance appears on the patch such as fire, wind throw
@@ -110,8 +126,14 @@ Transition probabilities were fitted simultaneously searching for the global opt
 
 We selected 12 set of parameters whose converged and had the best likelihood value in order to perform the simulations on each set and evaluate the sensitivity of the model.
 
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{figs/simus_redu_schema.pdf}
+	\end{center}
+\end{figure}
+
 % More justification
-% Why we choose those climatic variable ? Those climatic variable have been recognized as a good combination to explain the distribution of the boreal forest \cite{Scheffer2012}.
+% Why we choose those climatic variable ? Those climatic variable have been recognized as a good combination to explain the distribution of the boreal forest \cite{Scheffer2012,Goldblum aussi}.
 
 % Mise à l'échelle années pour les transitions
 
@@ -155,7 +177,7 @@ The environnemental stochasicity (GCM's; n=23)
 Parameters sensitivity (n=12)
 
 
-%Penser à des chiffres précis
+New response curve: No leading edge but a higher abondances at the edge. This respond form is uncovered in the \cite{Lenoir2014a} article.
 
 
 % TODO
@@ -163,6 +185,6 @@ Parameters sensitivity (n=12)
 
 
 \clearpage
-\bibliography{/Users/steve/Documents/BibteX/Master}
+\bibliography{/home/steve/Dropbox/Bibtex/Master}
 
 \end{document}

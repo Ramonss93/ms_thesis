@@ -19,7 +19,6 @@ Species-sorting
 
 - Process-based models models enhance abilities to understand and predict future range shift (Snell 2011).
 - Meta-community approach to Process-based models. The STM include several mechanisms ()
-- Integrate ecological processes is primordial to study range shift at the edges of species distributions. *Transition to boreal-temperate ecotone*
 
 
 1.**What's limit the ability to predict future vegetation range shift ?**
