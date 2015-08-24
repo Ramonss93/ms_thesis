@@ -1,17 +1,35 @@
 \begin{figure}
 \begin{center}
-	\tikzstyle{State}=[circle,
-		thick,
-		minimum size = 1.2cm,
-		inner sep =5pt,
-		draw=black,
-		fill=black!40]
+	\tikzstyle{Temperate}=[circle,
+	    thick,
+	    minimum size = 1.2cm,
+	    inner sep =5pt,
+	    draw=Temperate,
+	    fill=Temperate]
+	\tikzstyle{Boreal}=[circle,
+	    thick,
+	    minimum size = 1.2cm,
+	    inner sep =5pt,
+	    draw=Boreal,
+	    fill=Boreal]
+	\tikzstyle{Regeneration}=[circle,
+	    thick,
+	    minimum size = 1.2cm,
+	    inner sep =5pt,
+	    draw=Regeneration,
+	    fill=Regeneration]
+	\tikzstyle{Mixed}=[circle,
+	    thick,
+	    minimum size = 1.2cm,
+	    inner sep =5pt,
+	    draw=Mixed,
+	    fill=Mixed]
 
 	\begin{tikzpicture}[->,>=stealth',auto,scale=0.60]
-		\node [circle,State] (M) at (0,0) {M};
-		\node [circle,State] (B) at (-8,5) {B};
-		\node [circle,State] (T) at (8,5) {T};
-		\node [circle,State] (R) at (0,10) {R};
+		\node [circle,Mixed] (M) at (0,0) {M};
+		\node [circle,Boreal] (B) at (-8,5) {B};
+		\node [circle,Temperate] (T) at (8,5) {T};
+		\node [circle,Regeneration] (R) at (0,10) {R};
 
 		\path	(M) edge [thick,loop below,-latex]  node {} (M);
 		\path	(T) edge [thick,loop right,-latex]  node {} (T);
