@@ -66,36 +66,14 @@ brk <- 100
 
 #Spectral ou RdYlBu
 
-pdf(file="./future_distrib_states.pdf",width = 10, height =10.5)
-layout(matrix(c(1:6,7,7), 4,2 ,byrow=TRUE),height=c(1,1,1,0.4),TRUE)
+png(file="./future_distrib_states.png",width = 10.5, height =7.5,units="in",res=300)
+layout(matrix(c(1:4,5,5), 3,2 ,byrow=TRUE),height=c(1,1,0.4),TRUE)
 par(mar=c(0.5,0.5,0.5,0.5),oma=c(1, 2, 1, 1))
 
 
 plot(border,border=NA,col="grey70")
 #image(alt,axes=FALSE,xlab="",ylab="",asp=1,col=dem(100))
 image(st_15$T,axes=FALSE,xlab="",ylab=,asp=1,zlim=c(0.01,1),breaks=round(seq(0,1,length.out=brk),2),col=pal(brk-1),add=TRUE)
-plot(great_lakes,lwd=0.4,col="white",border="grey20",add=TRUE)
-plot(border,add=TRUE,lwd=0.6,border="grey20",col=NA)
-llgridlines(border,cex=0.8,lty=3)
-
-plot(border,border=NA,col="grey70")
-#image(alt,axes=FALSE,xlab="",ylab="",asp=1,col=dem(100))
-image(st_15$M,axes=FALSE,xlab="",ylab="",asp=1,zlim=c(0.01,1),breaks=round(seq(0,1,length.out=brk),2),col=pal(brk-1),add=TRUE)
-plot(great_lakes,lwd=0.4,col="white",border="grey20",add=TRUE)
-plot(border,add=TRUE,lwd=0.6,border="grey20",col=NA)
-llgridlines(border,cex=0.8,lty=3)
-
-
-plot(border,border=NA,col="grey70")
-#image(alt,axes=FALSE,xlab="",ylab="",asp=1,col=dem(100))
-image(st_45$T,axes=FALSE,xlab="",ylab="",asp=1,zlim=c(0.01,1),breaks=round(seq(0,1,length.out=brk),2),col=pal(brk-1),add=TRUE)
-plot(great_lakes,lwd=0.4,col="white",border="grey20",add=TRUE)
-plot(border,add=TRUE,lwd=0.6,border="grey20",col=NA)
-llgridlines(border,cex=0.8,lty=3)
-
-plot(border,border=NA,col="grey70")
-#image(alt,axes=FALSE,xlab="",ylab="",asp=1,col=dem(100))
-image(st_45$M,axes=FALSE,xlab="",ylab="",asp=1,zlim=c(0.01,1),breaks=round(seq(0,1,length.out=brk),2),col=pal(brk-1),add=TRUE)
 plot(great_lakes,lwd=0.4,col="white",border="grey20",add=TRUE)
 plot(border,add=TRUE,lwd=0.6,border="grey20",col=NA)
 llgridlines(border,cex=0.8,lty=3)
@@ -109,23 +87,47 @@ llgridlines(border,cex=0.8,lty=3)
 
 plot(border,border=NA,col="grey70")
 #image(alt,axes=FALSE,xlab="",ylab="",asp=1,col=dem(100))
+image(st_15$M,axes=FALSE,xlab="",ylab="",asp=1,zlim=c(0.01,1),breaks=round(seq(0,1,length.out=brk),2),col=pal(brk-1),add=TRUE)
+plot(great_lakes,lwd=0.4,col="white",border="grey20",add=TRUE)
+plot(border,add=TRUE,lwd=0.6,border="grey20",col=NA)
+llgridlines(border,cex=0.8,lty=3)
+
+plot(border,border=NA,col="grey70")
+#image(alt,axes=FALSE,xlab="",ylab="",asp=1,col=dem(100))
 image(st_95$M,axes=FALSE,xlab="",ylab="",asp=1,zlim=c(0.01,1),breaks=round(seq(0,1,length.out=brk),2),col=pal(brk-1),add=TRUE)
 plot(great_lakes,lwd=0.4,col="white",border="grey20",add=TRUE)
 plot(border,add=TRUE,lwd=0.6,border="grey20",col=NA)
 llgridlines(border,cex=0.8,lty=3)
 
-mtext("Mixed", 3, -1,outer=TRUE,adj=0.77,font=2,cex=1.2)
-mtext("Temperate", 3, -1,outer=TRUE,adj=0.23,font=2,cex=1.2)
+# plot(border,border=NA,col="grey70")
+# #image(alt,axes=FALSE,xlab="",ylab="",asp=1,col=dem(100))
+# image(st_45$T,axes=FALSE,xlab="",ylab="",asp=1,zlim=c(0.01,1),breaks=round(seq(0,1,length.out=brk),2),col=pal(brk-1),add=TRUE)
+# plot(great_lakes,lwd=0.4,col="white",border="grey20",add=TRUE)
+# plot(border,add=TRUE,lwd=0.6,border="grey20",col=NA)
+# llgridlines(border,cex=0.8,lty=3)
+#
+# plot(border,border=NA,col="grey70")
+# #image(alt,axes=FALSE,xlab="",ylab="",asp=1,col=dem(100))
+# image(st_45$M,axes=FALSE,xlab="",ylab="",asp=1,zlim=c(0.01,1),breaks=round(seq(0,1,length.out=brk),2),col=pal(brk-1),add=TRUE)
+# plot(great_lakes,lwd=0.4,col="white",border="grey20",add=TRUE)
+# plot(border,add=TRUE,lwd=0.6,border="grey20",col=NA)
+# llgridlines(border,cex=0.8,lty=3)
 
-mtext("2095", 2, 0,outer=TRUE,adj=0.27,font=2,cex=1.2)
-mtext("2045", 2, 0,outer=TRUE,adj=0.57,font=2,cex=1.2)
-mtext("2015", 2, 0,outer=TRUE,adj=0.88,font=2,cex=1.2)
+
+mtext("2095", 3, -1,outer=TRUE,adj=0.77,font=2,cex=1.2)
+mtext("2015", 3, -1,outer=TRUE,adj=0.23,font=2,cex=1.2)
+
+mtext("Mixed", 2, 0,outer=TRUE,adj=0.37,font=2,cex=1.2)
+#mtext("2045", 2, 0,outer=TRUE,adj=0.57,font=2,cex=1.2)
+mtext("Temperate", 2, 0,outer=TRUE,adj=0.84,font=2,cex=1.2)
 
 par(mar=c(4,18,4,5))
 image(matrix(1:brk-1),col=pal(brk-1),axes=FALSE,ann=FALSE)
 axis(1,at=seq(0,1,length.out=5),lab=as.character(round(seq(0,1,length.out=5),2)))
 box(lwd=1.2)
 
-mtext("State probability",1,line=-1,at=-0.15,font=2)
+mtext("Predicted state probability \n over all simulations",1,line=-0.65,at=-0.17,font=2)
 
 dev.off()
+
+# Create Map 2 illustrating te time lag (Climatology, 2045, 2095)
