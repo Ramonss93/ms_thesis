@@ -42,6 +42,25 @@
 %\usepackage[duplicate]{chapterbib}
 %\usepackage{url}
 
+%% graphics packages
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{xcolor}
+\usepackage{pdflscape}
+\usepackage{wrapfig}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{diagbox}
+\usepackage{titling}
+
+\usetikzlibrary{shapes, arrows, positioning}
+% State colors
+\definecolor{Temperate}{RGB}{254,172,24}
+\definecolor{Boreal}{RGB}{24,148,148}
+\definecolor{Regeneration}{RGB}{252,101,69}
+\definecolor{Mixed}{RGB}{135,209,134}
+\definecolor{States}{RGB}{51,51,51}
 
 % Ajout Cyril :
 \usepackage[linktocpage=true,linkcolor=cyan,citecolor=cyan,colorlinks=true,urlcolor=blue]{hyperref}
@@ -86,7 +105,7 @@
 
 % Info sur la thèse (Titre, auteur, etc.)
 \Titre{BIOGÉOGRAPHIE ET DYNAMIQUE DE LA FORÊT TEMPÉRÉE NORDIQUE DANS UN CONTEXTE DE CHANGEMENTS CLIMATIQUES} % Mettre en majuscule!! (je nai pas résolu ce probleme...)
-\Auteur{Steve Vissault}
+\Auteur{Steve Vissault} 
 \Faculte{programme de maîtrise en gestion de la faune et de ses habitats}
 \Diplome{maître ès sciences}
 \Date{Janvier}{2016}
@@ -149,9 +168,9 @@
   \phantomsection\addcontentsline{toc}{chapter}{\MakeUppercase{\@references}}
   \makeatother
   \selectlanguage{english}
-  \bibdata{mylib}
+  \bibdata{Master.bib}
   \bibliographystyle{elsarticle-harv} % Ici éditer le style
-  \bibliography{mylib} % Ici mettre le nom de la biblio, ici mylib.bib
+  \bibliography{Master.bib} % Ici mettre le nom de la biblio, ici mylib.bib
 \end{singlespace}
 
 % ----------------------------------------------------------------------%
