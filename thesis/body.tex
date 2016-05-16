@@ -1,5 +1,6 @@
-
+\begin{spacing}{1.0}
 \chapter{La démographie, une contrainte à l'expansion de la forêt tempérée vers le Nord}
+\end{spacing}
 
 \section{Résumé en français du premier article}
 
@@ -25,13 +26,743 @@ nécessaire à l'initialisation du MCMC. Elle a également contribué à la rév
 L'ensemble de mon équipe d'encadrement a fourni une assistance technique inestimable dans la plupart
 des étapes scientifiques nécessaires à l'obtention de ces résultats.
 
-Les résultats présentés ici reposent sur les paramètres issus la calibration par maximum de vraisemblance. De nouvelles simulations vont être amorcées en utilisant la distribution postérieure du MCMC afin d'obtenir une meilleure estimation de l'incertitude dans les projections. Les résultats de cet article ont été présentés à deux congrès internationaux et deux congrès provinciaux sous forme d'une affiche et d'une conférence. La conférence s'intitulait \enquote{\textit{Difficult migration of temperate tree species in boreal forest under climate change?}}, présenté au 9$^e$ colloque du Centre d'étude de la Forêt (CEF) en avril 2015 et au 7$^e$ congrès eCANUSA sur les sciences forestières en octobre 2014. Enfin, l'affiche portait le titre \enquote{\textit{A state transition model to investigate what constrains the northward migration of the temperate forest}} et a fait l'objet d'une présentation au colloque du Centre des sciences de la biodiversité du Québec (CSBQ) en octobre 2015 et au 9$^e$ congrès IALE en écologie du paysage en juillet 2015. L'ensemble de ces travaux peuvent être téléchargés à partir de mon site internet personnel (\url{http://steveviss.github.io/paper/}). En parallèle à cette maîtrise, je me suis impliqué à titre de coauteur dans l'un des chapitres de la thèse de Christian Marchese (UQAR) portant sur la phénologie du phytoplancton dans la région arctique de la mer de Baffin. Cette collaboration a aboutie à un article intitulé \enquote{\textit{Changes in phytoplankton bloom phenology in the NOW polynya region: a response to changing environmental conditions}}, soumis en mars 2016 dans la revue \textit{Polar Biology}.
-
-
+Les résultats présentés ici reposent sur les paramètres issus la calibration par maximum de
+vraisemblance. De nouvelles simulations vont être amorcées en utilisant la distribution postérieure
+du MCMC afin d'obtenir une meilleure estimation de l'incertitude dans les projections. Les résultats
+de cet article ont été présentés à deux congrès internationaux et deux congrès provinciaux sous
+forme d'une affiche et d'une conférence. La conférence s'intitulait \enquote{\textit{Difficult
+migration of temperate tree species in boreal forest under climate change?}}, présenté au 9$^e$
+colloque du Centre d'étude de la Forêt (CEF) en avril 2015 et au 7$^e$ congrès eCANUSA sur les
+sciences forestières en octobre 2014. Enfin, l'affiche portait le titre \enquote{\textit{A state
+transition model to investigate what constrains the northward migration of the temperate forest}} et
+a fait l'objet d'une présentation au colloque du Centre des sciences de la biodiversité du Québec
+(CSBQ) en octobre 2015 et au 9$^e$ congrès IALE en écologie du paysage en juillet 2015. L'ensemble
+de ces travaux peuvent être téléchargés à partir de mon site internet personnel
+(\url{http://steveviss.github.io/paper/}). En parallèle à cette maîtrise, je me suis impliqué à
+titre de coauteur dans l'un des chapitres de la thèse de Christian Marchese (UQAR) portant sur la
+phénologie du phytoplancton dans la région arctique de la mer de Baffin. Cette collaboration a
+aboutie à un article intitulé \enquote{\textit{Changes in phytoplankton bloom phenology in the NOW
+polynya region: a response to changing environmental conditions}}, soumis en mars 2016 dans la revue
+\textit{Polar Biology}.
 
 
 \newpage
 
-\section{Slow demography constrains the North-Eastern Temperate Forest expansion under Climate Change}
+\begin{spacing}{1.0}
+\section{\uppercase{Slow demography constrains the North-Eastern Temperate Forest expansion under Climate Change}}
+\end{spacing}
 
-\textbf{AUTHORSHIP}
+\subsection*{\uppercase{Abstract}}
+
+Many species are not migrating fast enough to keep pace with the rapidly changing climate. It is well known that trees experience long time lags in their migration responses because they are sessile, long-lived and have a relatively short dispersal ability. Current approaches to forecast range shifts under climate change, such as Species Distribution Models, cannot account for the particularities of forest ecosystems because they assume infinite dispersal and an instantaneous response to climate change. Here, we propose a new modelling approach based on metapopulation theory to account for dispersal limitations, biotic interactions and the demography of the temperate forest. Our objective is to assess if the northeastern American temperate forest will be able to track its climatic optimum by the end of this century. We performed simulations on the boreal-temperate ecotone using State and Transition Models (STMs), wherein forest communities are classified in 4 states: boreal, temperate, mixed and stands in regeneration. Transitions among states are calibrated from several long-term forest plot surveys from the United States and Canada. We find that the temperate forest will move only 14$\pm$2.0 km into the boreal forest by the end of this century, contrary to predictions from standard species distribution models that the temperate forest will shift northward by 238.79$\pm$34.24 km. We also find that most of the expected transitions will be the conversion from mixed to pure temperate stands. A comparison with an infinite dispersal scenario reveals that biotic interactions and stand replacement dynamics are the most significant factors limiting migration rate of forest trees. We conclude that the temperate forest has a low resilience to climate change because of their low demography and competitive interactions with resident trees.
+
+
+\cleardoublepage
+
+\section*{\uppercase{Introduction}}
+
+The current challenge biogeographers are facing today is not only to predict future species
+distribution, but also to assess if species will be able to follow their climatic optimum by
+migration \citep{Lenoir2014a,Renwick2014}. Correlative Species Distribution Models (SDMs) are one of
+the most popular methods to evaluate the impact of climate change on biodiversity, but they are well
+known for their shortcomings, in particular with respect to their ability to predict the rate of
+range shifts \citep{Thuiller2008, Guisan2005a}. SDMs are based on the statistical relationship
+between distribution and the environment, and projections into the future often assume unlimited
+dispersal and instantaneous response to climate change \citep{Thuiller2008}. In some situations, SDM
+predictions of future distributions can be biased because of our inability to disentangle biotic
+from abiotic drivers of distribution \citep{Kissling2012,Wisz2013}. For instance, strong competitive
+interactions, slow demography and dispersal limitations can drive some species to local extinction,
+prevent colonization at the leading edge and create non-equilibrium situations in which species may
+be absent from suitable environments \citep{Boulangeat2012a,Pulliam2000}. Species might persist for
+a while at newly unsuitable locations because of the time-delayed extinction and source-sink
+dynamics \citep{Schurr2012}. These mechanisms could slow down spreading rates and explain why many
+species fail to migrate \citep{Zhu2012} and keep pace with the rate of climate change
+\citep{Renwick2014,Svenning2004,Lenoir2014a}.
+
+Range dynamics of forest tree species are particularly worth attention. Tree species may be
+vulnerable to migration lags because they are sessile, long-lived, have a small intrinsic growth
+rate, relatively short dispersal and often require long time to reach reproductive maturity
+\citep{Renwick2014,Vanderwel2014}. Dispersal limitations and demographic rates (growth, mortality
+and reproduction) might modulate their response to climate change and further contribute to this lag
+\citep{Svenning2014a}. Two parameters in particular, the intrinsic growth rate ($r$) and the average
+dispersal distance ($D$), are identified by classical diffusion models (e.g., Fisher-Skellam) as
+crucial drivers of migration rates \citep{SKELLAM01061951,Svenning2014a}. Even if forest range
+dynamics are more complex than the representation by these models, these two parameters point to
+fundamental quantities that are required in order to understand the transient phase between the
+initiation of climate change and a species reaching its new equilibrium distribution. For example,
+strong competition at distribution edges can reduce intrinsic growth rate, which, coupled with
+dispersal limitations, might contribute to slow colonization \citep{Moorcroft2006}. Plant-soil
+feedbacks, seed dispersers, mycorrhizae and other types of biotic interactions also contribute to
+local forest dynamics and consequently have potential implications on large-scale range dynamics
+\citep{Afkhami2014, Ricklefs2004, Wootton2001a}. Integrating such demographic and spatial
+constraints on range shift projections is essential to improve our understanding of species
+migration \citep{Normand2014a}.
+
+Several North American temperate deciduous tree species (e.g. \textit{Fagus grandifolia},
+\textit{Betula alleghaniensis}, \textit{Acer saccharum}, \textit{Quercus rubra}) are expected to
+expand their distributions northward \citep{Iverson2002,Sciences2014}, where boreal forest is
+already established and dominated by conifers. The northward settlement of temperate species might
+be difficult as the success of their colonization is not only determined by climate, but also by
+subtle variation in substrate, drainage, physical soil properties and nutrient availability
+\citep{Goldblum2010, Lafleur2010, Brown2014}. Compared with soils in temperate forests, soil  under
+coniferous trees tend to be poorly decomposed, colder, wetter and covered by snow for a longer
+periods \citep{Barras1998, Lafleur2010, Goldblum2010}, potentially hindering the local establishment
+of temperate species \citep{Lafleur2010, Brown2014}. However, some boreal deciduous species such as
+\textit{Populus tremuloides} can contribute to this transformation by colonizing pure coniferous
+stands, improving soil physical and chemical properties and facilitating temperate tree regeneration
+\citep{Laganiere2009}. Thus, plant-soil feedbacks may lead to patchy spatial structure in the
+boreal- temperate ecotone consisting of a mosaic of mixed stands of coniferous and deciduous
+species, pure stands of deciduous trees on favourable locations and pure coniferous stands on less
+favourable sites \citep{Goldblum2010, Fisichelli2013}. Differences in soil properties and ecosystem
+functioning between deciduous and coniferous stands may impede stand conversions within the ecotone,
+consequently slowing down the migration process.
+
+The persistence of a plant community at a single location depends on its ability to resist
+disturbances and invasion by other species. Environmental stressors, such as changes in climate
+conditions or biomass removal, can change forest successional trajectory and even make it jump to an
+alternative stable forest state \citep{Stringham2003}. For instance, several studies have shown that
+the prevalence of deciduous (e.g., \textit{A. saccarhum and rubrum}) and intermediate tree species
+(e.g., \textit{P. tremuloide, Betula papyrifera}) have increased in the last decades along
+altitudinal and latitudinal gradients in response to management actions
+\cite{Dupuis2011,Boucher2006} and climate change \citep{Beckage2008}. These findings suggest that
+the compositional changes at latitudinal and elevational ecotones are already observable and that
+forest stands are currently jumping from one attractor (i.e. dominance by coniferous trees) to
+another (i.e. deciduous trees).
+
+The clear functional distinction between temperate deciduous and boreal coniferous stands
+facilitates the representation of the dynamics with a state and transition model (STM). STMs were
+introduced by \citet{Westoby1989} and have been commonly used to study vegetation dynamics
+\citep{Briske2005, Bestelmeyer2011}. They follow the long tradition of Markov Chain models used in
+forest ecology \citep{waggoner1970, horn1975, binkley1980}. An STM is based on the idea that plant
+communities can be categorized into discrete states (e.g., temperate, boreal, and mixed forest). A
+spatial unit (e.g., a grid cell in a lattice) can encompass scales from single individuals to entire
+communities \citep{Briske2005}. Vegetation dynamics are then driven by stochastic transitions
+between states. With typical datasets on forest communities, transitions can be evaluated from
+empirical observations, integrating demography, dispersal and species interactions effects and thus
+offering opportunities to disentangle which of these local mechanisms are limiting or increasing
+temperate species migration rates under climate change.
+
+Stationary transition matrices are problematic to represent range expansion because they do not
+account for the build-up of the propagule pressure with the increase of a species abundance, nor do
+they account for climatic gradients in transition probabilities. Metapopulation theory fortunately
+provides an easy means to solve these issues. The standard metapopulation model \citep{Levins1969}
+represents the stochastic transitions among two states (i.e., patches are either occupied or not) in
+a similar way to Markov Chain models of forest dynamics, with the addition of dispersal. The Levins
+model \citep{Levins1969} could be viewed as a continuous time analogue of such models with a
+non-stationary transition matrix that depends on the prevalence of the species. The model has
+already been extended  to incorporate environmental gradients \citep{Holt2000,Holt2005}, whereby a
+species can persist in a given landscape when the colonization rate of empty patches is higher than
+the extinction rate, and has been applied empirically to study individual species' distributions in
+eastern North America \citep{Talluto2state}. Here, we explore a further extension of the Levins and
+Holt models to multi-species communities to better understand how climate change and regional-scale
+dynamic processes  will influence the response of boreal and temperate forests to climate change.
+
+
+Our first objective in this study is to assess if temperate deciduous tree species of eastern North
+America will be able to track their climate optimum over the next century. Secondly, we seek to
+investigate which ecological processes are delaying the migration response of temperate forest. We
+use an STM derived from metapopulation theory to represent the processes of colonization,
+competitive exclusion and disturbance dynamics at the temperate/boreal ecotone, and we analyze the
+model analytically and through simulations. Transitions among states were
+calibrated using long-term forest plots surveys from the United States and Canada, where each
+possible transition was a function of the climatic conditions. We simulated the landscape dynamics
+over the most extreme climate change scenario \citep[RCP 8.5,][]{Taylor2012} in order to force range
+shifts. We further run four different versions of the model to investigate the importance of
+demography and dispersal limitations on range expansion rates. Our results reveal that the temperate
+forest has a low resilience to climate change because of a slow demography and significant dispersal
+limitations.
+
+\cleardoublepage
+
+\section*{\uppercase{Methods}}
+
+We first describe the model representing the transitions among the four forest communities (i.e. boreal, temperate, mixed and regeneration communities). Then we explain the calibration using observations of transitions from permanent forest inventory plots in the United States and Canada. We consider plots from Southern Appalachians up to the boreal forest of Québec and Ontario.
+Then we describe the analysis performed in 3 steps: (i) identifying the relationship between climate and transition probabilities, (ii) characterizing the range shift dynamics under climate change over different scenarios, and (iii) disentangling via simulation scenarios the importance of demography, biotic interactions and dispersal limitations on migration rates.
+
+%---------------------------
+\subsection*{Modelling approaches}
+
+We consider a landscape made of a large number of patches that could be occupied by any of four
+vegetation types, defined by successional status and composition: Regeneration (R), Boreal (B),
+Temperate (T) and Mixed (M; Fig.\ref{diag}; see \emph{Classification of states} below for a
+description). These four states summarize the clustering of species found along the first two axes
+of a Principal Component Analysis of the relative abundance of dominant species across North-Eastern
+America (Supplementary Information Fig. S1).
+% S1 figure missing (coming soon), see with Dom
+
+Transitions among states are represented as a stochastic process influenced by climate, ecological
+interactions and dispersal. The state of focal plot $i$ at time step $t+1$, given by $X_{t+1,i}$, is
+a random variable with a probability distribution conditional on the initial state $X_{t,i}$,
+climatic conditions a time $t$, and the prevalence of the four states in the neighbourhood of $i$
+(Hereafter, we assume all equations are relative to a focal stand and omit the subscript $i$ for
+clarity of notation). The model dynamic is represented by the following ecological processes
+(Fig.\ref{diag}). A disturbance occurs with probability $\epsilon$ and converts T, B and M to
+Regeneration (R). Conversely, colonization of the R state by temperate trees happens with
+probability $\alpha_T (T+M)$, and similarly colonization by boreal trees happens with probability
+$\alpha_B (B+M)$. The colonization probability depends on the amount of propagules produced by
+neighbouring patches ($T+M$ or $B+M$), thus accounting for metapopulation dynamics. A joint
+colonization event is possible, leading to a transition directly to state M, with probability
+$\alpha_T (T+M) \cdot \alpha_B (B+M)$. Mixed stands can also arise via colonization of temperate
+stands by boreal trees, with probability $\beta_B (B+M)$, or conversely by the colonization of a
+boreal patch by temperate trees with probability $\beta_T (T+M)$. Competitive exclusion results in
+the transition from M patches to either B or T, respectively with probability $\theta_B$ and
+$\theta_T$. Direct transitions between T and B are not allowed, and must instead occur via
+disturbance and succession, with R as an intermediate state, or invasion and competitive exclusion,
+with M as an intermediate state. All parameters $\alpha$, $\beta$, $\theta$, and $\epsilon$ were
+represented as a function of local climatic conditions.
+
+To understand the long-term behaviour of the system, we first considered a mean-field model, where
+the dynamics are represented by ordinary differential equations described in Figure \ref{EqSys} and
+with the constraint that $B + T + M + R = 1$. The analytical solution of the mean-field model yields
+the expected occupancy of the four states for any given climatic condition. We then implemented the
+mean-field model into a stochastic cellular automaton to predict transient states and address the
+lag in migration following climate change. We represented the landscape as a regular grid of cells
+(600m in longitude and 900m in latitude) where each cell at each time step is occupied by one of the
+four forest states (R, B, T or M). Individual cells transition to a new state with a probability
+varying with the climate conditions as in the mean-field model. The model was made spatially
+explicitly by computing the prevalence of states from the 8 immediately neighbouring cells. We then
+simulated the temperate-boreal forest ecotone, with each cell having climatic conditions obtained
+from the observed climate (to calibrate the model) or the projected climate from the RCP 8.5
+emissions scenario \citep{Taylor2012} (to project into the future). We selected this scenario
+because it predicts the largest temperature increase and we were interested in estimating the
+maximal migration rate possible. We then considered four modelling scenarios in order to disentangle
+the mechanisms limiting the northward migration of the temperate forest.
+
+The first modelling scenario consists of simulations of the spatially explicit dispersal as
+described above. It is the most realistic scenario among the three cases we consider, including
+demographic and biotic constraints and dispersal limitations. Secondly, we solved the system of
+differential equations for the 2095 climatic conditions. This scenario is at the other extreme as it
+assumes, like standard species distribution model, that there are no dispersal limitations and no
+demographic and biotic interaction constraints. For the third scenario, instead of computing the
+occupancy of the four states in the immediate neighbourhood of a focal cell as for the first
+scenario, we picked 8 cells at random in the entire grid. This third approach thus considers an
+infinite dispersal (a cell located at the northern edge of the distribution of boreal forest could
+be sown with propagules of temperate trees coming from the southern edge of the temperate forest).
+Demography is the only process limiting the migration in this situation. Finally, we also ran the
+spatially explicit dispersal model for 50 000 years in order to better understand the transient
+dynamics and the role of the demography on the migration delay. All of these modelling approaches
+were run for the 23 Global Climate Models (GCMs, from the RCP 8.5 emission scenario) and repeated
+120 times. GCMs used to project landscape dynamics were downscaled at 10 km$^2$ by Ouranos, a
+Consortium on Regional Climatology and Adaptation to Climate Change, using the method of linear
+scaling of precipitation and temperature \citep[Method description in][]{Teutschbein2012}.
+
+\subsection*{Calibration from forest inventory data}
+
+\subsubsection*{Classification of states}
+
+We classified states using data from permanent sample plots in forest inventory databases from
+Eastern North America. This forest inventory network incorporated the Forest Inventory and Analysis
+National Program in the United States \citep{Inventory2007a}; Domtar a forest private company in
+Quebec; the Ministry of Forest, Wildlife and Parks in Quebec \citep{MRN2013}; the Ministry of
+Natural Resources and Forestry in Ontario \citep{OMNR2014}; the Ministry of Natural Resources in New
+Brunswick \citep{Porter2001}. These databases differ in ontology but were integrated using their
+common information on trees measurements and their location. For each database we extracted plot
+locations, plot surface, years of measurement, species names for every individual tree and diameter
+at breast height (DBH). We transformed the data for each individual tree into basal areas $m^2/ha$
+and summed it at the plot level. We considered living trees with a DBH $\ge$ 127 mm in order to
+standardize measurements across forest inventories. We extracted data for a total of 45 804 plots
+with a annual mean temperature lower than 10$^{\circ}$C. Plot surveys started in 1960 and finished
+in 2012, with 14 080 plots measured once, 16 626 plots measured twice, 14 837 plots measured up to
+twice. The time intervals between plot measurements are not constant among plot databases with a
+median time of 5 years. We removed from the analysis plots with a time interval below than 5 years
+as no natural transitions are expected to be observed at this time scale. We also removed plots with
+time intervals above 15 years to reduce the probability of ``masked'' transitions, where a single
+observation actually incorporates two transitions. For example, an observation of B $\rightarrow$ B
+could occur due to a lack of any transition, or due to a disturbance, causing B $\rightarrow$ R,
+followed by succession, resulting in R $\rightarrow$ B.  Uneven transition probabilities were
+standardized to a 5-year interval via rescaling, where $\phi_5 = 1 - (1 - \phi_{t})^{5/t}$, where
+$\phi_5$ is any transition probability over a 5-year interval and $t$ is the length of the
+observation interval. The analysis was thus made on 49 043 measurements located between
+57$^{\circ}$W to 96$^{\circ}$W and 35$^{\circ}$N to 52$^{\circ}$N.
+
+To classify the plots into the (B)oreal, (T)emperate, (M)ixed, or (R)egeneration states, we examined
+the total biomass (as estimated by basal area) and species composition at each time step. Because
+the regeneration state represents post-disturbance stands, we used total basal area as the criterion
+for selection, where a plot was classified as R when basal area was less than $5m^2/ha$. The other
+states were determined by species composition. We classified temperate plots as those where at least
+one individual of the following species (\textit{Prunus serotina}, \textit{Acer rubrum},
+\textit{Acer saccharum}, \textit{Fraxinus americana}, \textit{Fraxinus nigra}, \textit{Fagus
+grandifolia}, \textit{Ostrya virginiana}, and \textit{Tilia americana}) was present, and no boreal
+species (\textit{Picea mariana}, \textit{Picea glauca}, \textit{Picea rubens}, \textit{Larix
+laricina}, \textit{Pinus banksiana}, \textit{Abies balsamea}, and \textit{Thuja occidentalis}) were
+present. Alternatively, the boreal state was determined by the presence of boreal species and
+absence of temperate ones. The stand was classified as mixed if both categories of species were
+found in a stand. Based on this classification, we observed 3 910 transitions between different
+vegetation states and 45 133 non-transitions (Table S\ref{transmat}).
+
+\subsubsection*{Environmental data}
+
+Plot locations were intercepted with environmental data for 3 bioclimatic variables: the annual mean
+temperature ($^{\circ}$C), the annual precipitation (mm) and the mean diurnal range ($^{\circ}$C),
+as well as 2 soil descriptors: the slope ($^{\circ}$) and soil ph. To reduce the effect of
+inter-annual climate variability, we computed each climate variable as the 15-year average prior to
+a plot measurement. The annual past climatic conditions were extracted from a $10km^2$ resolution
+grid using the ANUSPLIN climate modelling software \citep{McKenney2011}. ANUSPLIN is essentially a
+multidimensional “nonparametric” surface fitting method which is suited to interpolate various
+climate parameters from meteorological stations with historical records \citep[Method description
+in][]{McKenney2011}. Soil pH was intercepted obtained from “SoilGrids” — an automated system for
+global soil mapping provided by Global Soil Information Facilities (ISRIC, \citep[Method description
+in][]{Hengl2014} at a resolution grid of $1km^2$. Finally, we retrieved information on slope aspect
+using the global 30 Arc-Second Elevation Data Set (GTOPO30) DEM courtesy of the U.S. Geological
+Survey Agency.
+
+%---------------------------
+\subsubsection*{Calibration}
+
+We considered the state of a given sampling plot at time $t+1$, $X_{t+1}$ as a random variable
+determined by a stochastic process conditional on the state at the time $t$, $X_t$, and climatic
+covariates $E$. It is a first-order markovian process since the transition is conditional only on
+the previous time step and independent of previous history. The probability function representing
+this process is $P(X_{t+1}|X_t,E,N)$, with $E$ being the set of climatic conditions and $N$ the
+prevalence of the states in the neighbourhood. We used simulated annealing \citep[R package
+GenSA;][]{YangXiang2013} to attain by maximum likelihood, the estimate of the parameters pertaining
+each transition probability illustrated at figure \ref{diag}. Each of them is a function of mean
+annual temperature ($TP$, $^{\circ}$C) and mean annual precipitation ($PP$, mm). Each of the per
+patch transition probabilities (i.e., $\alpha_T$,$\alpha_B$, $\beta_T$, $\beta_B$, $\theta_T$,
+$\theta_B$, and $epsilon$; Fig. \ref{tikz:dia}) was modelled as second order logistic function of
+climatic conditions. Thus, any parameter $\phi$ is modelled as:
+
+
+%---
+\begin{equation}
+  logit(\phi) = a_0 + a_1 \cdot TP + a_2 \cdot PP + a_3 \cdot TP^2 + a_4 \cdot PP^2
+\end{equation}
+%---
+
+Transition probabilities involving the colonization by either temperate or boreal trees are
+dependent on the prevalence of B, M and T in the neighborhood of the plot. The evaluation of the
+model therefore requires data on the forest composition around the location of the plot. Such data
+are not available in the forest inventory databases and the incompatibility of stand classifications
+in the United States and Canada prevent the usage of stand maps. We therefore approximated the
+neighborhood composition by spatial interpolation of the forest composition using the multinomial
+Random Forest classification algorithm \citep[R package randomForest;][]{Liaw2002a} to get the
+expected probability of finding the states B, M, T and R. The interpolation involved the annual mean
+temperature, the annual precipitation, the mean diurnal range, slope aspect, soil pH and the $(X,Y)$
+coordinates as explanatory variables. All of these variables were retained as the best descriptors
+of the state distributions. The classification algorithm was run on the entire dataset and the
+predicted occupancy of the different states were obtained for each plot based on its spatial
+coordinates and environmental conditions.
+
+%---------------------------
+
+\subsection*{Analysis}
+
+Prior to analyzing the STM, we evaluated the strength of the relationship between transitions among
+states and climate conditions using a multinomial regression \citep[R package
+nnet;][]{Venables2002}. This model does not consider dispersal limitation (i.e., the prevalence
+terms in the full model) nor patch-scale ecological processes (i.e., the $alpha$, $\beta$, $theta$,
+and $epsilon$ parameters), rather simply relates observed transitions to climate. This serves as a
+baseline for whether we could expect to observe climatic relationships within the more mechanistic
+STM. We considered a third order polynomial including both average annual temperature and total
+precipitation, and then removed each of the terms one after the other to understand their
+contribution to the likelihood (using the $\delta AIC$). The two climatic variables were
+standardized to mean 0 and unit standard deviation in order to compare regression coefficients.
+Other climatic variables were also considered but were found to be weaker predictors and are thus
+not considered.
+
+We then solved the system of differential equations at equilibrium (i.e. mean field model) for each
+location of the climatic grid using the maximum likelihood estimates of the parameters. Analytical
+solutions were found using the deSolve R Package \citep{Soetaert2010}. We mapped the solution and
+compared it to the actual distribution in order to validate the predictions of the model. This
+comparison was performed using 14 080 plots that were measured only once and therefore could not be
+used for calibration. For each of these plots, we computed the expected state by selecting the state
+with the highest occurrence probability from the STM.  For the B, M, and T states, we then evaluated
+the classification skill of the model by computing correct (i.e., predicted and observed presence or
+absence or each state) and incorrect (i.e., prediction of presence or absence and observation of the
+opposite) classification and calculating the True Skill Statistic (TSS) \citep{Allouche2006a}, which
+provides an estimate ranging from 0--1 where 0 indicates no classification skill and 1 indicates
+perfect classification.  Because disturbances are largely driven by stochastic events and were
+relatively rare, we expected that the model would have high skill in predicting the absence of
+disturbance (most plots are undisturbed), but little skill in predicting the precise spatial
+location of disturbances, rendering any TSS estimate uninterpretable. Thus, we did not compute TSS
+for the R state.
+
+To understand transient states under climate change and analyze the migration rates, we ran the
+cellular automaton model on the spatially explicit climatic grid with climate change scenarios. The
+equilibrium solution obtained with the differential equations was used as the initial condition for
+conducting simulations to make sure than any observation of change in state distribution is caused
+by the changing climatic conditions and not by initial distributions that are not in equilibrium
+with initial climatic conditions. We used a five-year time step and ran the  simulations from 2000
+to 2095. At each time step, we recomputed the expected transition rates for each cell using the
+average climate of the preceding 15 years.
+
+We subset from the grid into a band of 9.6km in longitude and 520 km in latitude in order to compute
+the migration rate of the temperate forest. The band started north of the city of Montreal in the
+maple bioclimatic domain and extended up to the spruce-moss domain, in the boreal forest near
+Chibougameau. The range limits of the temperate forest at any moment in time was recorded as the
+northernmost location (95th percentile) of a temperate or a mixed state along this band. We then
+computed range expansion each time step and estimated the migration rate for any time interval as
+the annual movement northward (in km) along this south-north gradient.
+
+\cleardoublepage
+
+\section*{\uppercase{Results}}
+
+
+We first investigated the relationship between transition probabilities and climatic variables using
+a multinomial regression and found that all transitions are significantly related to the annual mean
+temperature and the total annual precipitation (Table \ref{nnet_tab}). Mean average temperature had
+the strongest contribution to the likelihood of all transitions except for the transitions to M
+where the total annual precipitation was predominant ($\Delta\text{AIC}_{pp}$= 28.60 ,Table
+\ref{nnet_tab}). The transitions to T (competitive exclusion and colonization) and R (disturbance)
+were the most strongly correlated with climate ($R^2 = 0.15$ and $R^2 = 0.22$ respectively). The
+transitions from state R to M and T both increased with temperature (Figure \ref{nnet_space}). The
+disturbance probability remained low (<0.005) through the entire climatic space (Fig.
+\ref{nnet_space}).
+
+Similarly, we found strong relationships between the STM transition parameters and climate (Table
+\ref{nnet_tab}). In particular, all transitions involving the invasion of temperate trees (i.e., R
+to M or T, B to M, and M to T) were all strongly positively related to temperature (Fig.
+\ref{nnet_space}). As expected, the competitive exclusion pathway for boreal trees (i.e.,
+transitions from T to M and M to B) were strongly negatively related to temperature, however the
+successional pathway to boreal forest (R to B) showed little response to temperature (Fig.
+\ref{nnet_space_TotB}). The equilibrium solution of the dynamic model under the 2015 climatic
+conditions agreed well with the current distribution of temperate, mixed and boreal forest
+(Fig.\ref{validation_fig}), will relatively  modest TSS values for the states B, T (0.46 and 0.43,
+respectively), and a lower value, 0.18, for M (Table \ref{validation_tab}). There was nonetheless a
+high correspondence between the match of presences and absences, with 0.70-0.98 of observations
+correctly predicted.
+
+Our model predicts that temperate forests (i.e., pure stands of temperate species) cover an area of
+339 359 km$^2$ in 2015. This is expected to expand by 37.8\% in 2095. The major change in forest
+composition is expected in the transition zone, where mixed forests will be rapidly converted to
+temperate forest, for a reduction of 59\% of their area (Fig.\ref{turnover}). As a consequence, the
+ecotone area found in 2015 (where temperate and mixed coexist at the landscape level) will almost
+disappear by the end of this century (Fig.\ref{turnover}). The northern edge of the distribution
+does not change much, however, with almost no movement toward the north for either temperate of
+mixed states.
+
+We ran four different modelling scenarios with climate change to investigate the main drivers of
+migration dynamics. We found for the full model a northward migration of 14$\pm$2.1km by 2095.  By
+comparison, in the absence of dispersal limitation, demographic constraints, and biotic
+interactions, we found a migration of 238.79$\pm$34.24 km. In between, the simulation with infinite
+dispersal distance but with demographic constraints also has a very low northward migration at
+14$\pm$2.0km, similar to the simulations with dispersal limitation. The main factor slowing down
+migration thus appears to be demography. This constraint is so severe that the vegetation does not
+even reach equilibrium after 10 000 years (Figure \ref{mig_lat}). The mismatch between the suitable
+climatic conditions for temperate species and their realized distribution consequently increases
+constantly through time.
+
+\section*{\uppercase{Discussion}}
+
+A clear understanding of the determinants of migration dynamics under climate change is essential to
+improve our ability to predict future biodiversity distribution \citep{Svenning2014a}. Forest trees
+are expected to respond slowly to climate change because of their longevity, their low dispersal and
+slow demography \citep{Renwick2014,Vanderwel2014}. Here we analyzed the northward shift in
+distribution of temperate forest from North-Eastern America, a major biome covering North-Eastern
+United States and Canada. The dynamics and ecosystem properties of this ecosystem are strikingly
+contrasting with the ones of boreal forest, with on the one hand a small canopy gap disturbance
+regime with fast processing of a rich deciduous litter, and on the other hand a large scale
+disturbance regime (e.g. fire) with slow decomposition of an acidic and nutrient poor litter. We
+investigated the importance of key ecological processes - dispersal limitations, biotic interactions
+and demography - for the migration dynamics of this ecosystem. We found evidence for substantial
+lags in the response of these ecosystems to climate change; in particular the influx of temperate
+species into the boreal ecosystem was substantially slower than would be predicted based on climate
+envelopes alone. Moreover, these lags were principally due to the combination of slow demographic
+processes  (i.e., the invasion of seedlings into uncolonised patches) and dispersal limitations.
+These results together demonstrate that, although temperate species can be expected to grow in
+dominance in areas where they are already present, the replacement of existing boreal ecosystems by
+temperate forest will be a much slower process.
+
+Beyond rapid shift in forest structured induced by disturbances, the transitions we represented are
+driven by dynamical processes such as succession, competitive exclusion, and colonization. We
+expected that local climate is one factor driving the rate at which these transitions occur.
+\citet{Landhusser2010} found that the rate of colonization by deciduous trees (in this case,
+\textit{Populus tremuloides}) following disturbance is influenced by climate. Moreover, climate
+exerts a strong influence on the state of mature forests and their succession pathways
+\citep{Anderson-Teixeira2013}. Experiments at boreal and temperate latitudes show that rising
+temperatures affect all major chemical and biological processes and mediated forest successional
+dynamics \cite{Saxe2001}. Our study shows that, at the stand scale, colonization and succession have
+strong relationships with climate, whereas competitive exclusion shows a weaker relationship.
+However, all of these larger-scale ecological processes are ultimately functions of individual-level
+demographic processes such as growth, mortality, seedling establishment and reproduction.
+
+There is already substantial evidence that climate is influencing some of these processes. Some
+species such as \textit{Fagus} or \textit{Pinus} are already well known to be susceptible to
+moisture variation over the growing season, with lower moisture reducing germination success
+\citep{Clark2011}. Extreme drought can also cause massing mortality of several temperate deciduous
+tree species \citep{Anderson-Teixeira2013}. Spring and summer temperature has also been identified
+as critical on the fecundity \citep{Clark2011,Graignic2013}. The stratification of maple seeds for
+instance is strongly dependent on climate conditions prevailing in the spring, with strong evidence
+of local adaptation of Sugar maple seeds to cold temperatures at the northern edge of its
+distribution \citep{Solarik2016}. Sugar maple flower development is also affected by the timing of
+climatic events in the spring \cite{Letters2001} and as a consequence a mechanistic model of its
+distribution surprisingly fits well its distribution \citep{Morin2008}. Overall, these factors
+combine so that seedling density of Sugar maple is strongly related to the average temperature and
+precipitation in july \citep{Graignic2013}. Similarly, fecundity of boreal trees is also influenced
+by climate, such as the black spruce seeds requiring a certain amount of degree-days to mature
+\citep{Meunier2007}. Not all stages however are dependent on climatic conditions, some of them being
+more sensitive to competitive interactions than climate variation \citep{Zhang2015a}. Future
+research will therefore be required to determine more precisely the processes underlying our
+observation of climate dependence of state transitions.
+
+An important validation of our approach is that we successfully predicted the equilibrium
+distribution of these communities based on a dynamical model parameterized from observed
+transitions, rather than using static occurrence data such as is common in traditional species
+distribution models. The ecological niche is the conceptual backbone underlying most species
+distribution models. It posits that species distribution is constrained by local demography such
+that a species is found at locations where it has a positive intrinsic growth rate \citep{Holt2009}.
+It appears however that trees are not necessarily distributed where they grow best
+\citep{McGill2012}. Recenlty, \citet{Thuiller_2014} found only weak and idiosynchratic relationship
+between the population growth rate, abundance, carrying capacity and the distribution of most
+temperate and boreal tree species of North America and Europe.  These result suggest that tree range
+limits might be driven by processes happening at other spatial scales. Fortunately, metapopulation
+theory provides an alternative explantation to range limits.  According to \citet{Holt2005}, range
+limits could instead be driven by a balance between colonization and extinction processes. In such
+situation, not only a species must be able to establish a local population, as postulated by the
+traditional definition of the niche \citep{Holt2009}, but also that the colonization rate be larger
+than extinction. It appears from our results that a regional approach to range limits of trees
+would be more relevant to an approach based on local dynamics. Incidently, our analysis in this
+study is based on the same data as \citet{Thuiller_2014}, but we manage to better explain species
+distribution.  Our results would explain the conflicting observation that species such as sugar
+maple could well establish and develop way outside of its current range, in the deep boreal forest
+\citep{Kellman2004, Brown2014}. A regional approach to forest ecosystems also correspond to the
+long-held non-equilibrium view of forest ecosystems, with landscapes being a mosaic of patches at
+different successional status. Our approach should be applied to other forest ecosystems in order to
+assist its generality and relevance for a more general theory of range limits of forest trees.
+
+We simulated the migration dynamics happening according to 23 climate change scenarios drawn from
+the CMIP5 project, with the most pressimistic scenario  \citep[RCP 8.5,][]{Taylor2012}. We found
+that despite an average increase of 4 to 7$^{\circ}$C at the ecotone \citep{Climatique2015}, the
+temperate forest will barely move northward from its present distribution at the end of this
+century. Mixed forests will be rapidly converted to temperate forests, but the transition zone constraints at the southern limit of the boreal forest. The inability of temperate species to
+migrate will cause a spatial mismatch between the potential and realized species distributions,
+which could induce catastrophic shifts in forest ecosystems following anthropogenic and natural
+disturbances \citep{Walther2002a, Renwick2014, Vanderwel2014}. Such changes have been already
+observed at the boreal-temperate forest ecotone over the last decades \citep{Beckage2008}, in
+particular after these stands have been subject to forest management \citep{Dupuis2011,
+Boucher2006}. Fortunately, forest management could help reducing this increasing disquilibrium
+situation. First, by increasing the transition to state R, forest management could speed up the
+transition from Boreal to Mixed stands. Further, because clearcutting and other methods of
+harvesting increase light availability, it tends to increase successionnal rate \citep{Abrams1989}. Diffusion theory
+also predict that increasing the intrinsic population growth rate could speed up quite significantly
+the migration rate. Further, assisted migration \citep{Pedlar2012} can also increase the average
+dispersal distance by several orders, and thereby increase the resilience of forest ecosystems to
+climate change.
+
+A critical question remaining however is what will happen with maladapted boreal forests, that will
+stay in place for a certain time before temperate forest eventually migrate. There is currently no
+spatial analog of large tracks of boreal stands, found under warm, temperate climatic conditions and
+on mesic soils. Planted boreal trees, such as black spruce and jack pine, in warm climatic
+conditions indicate that the individual trees could stand warmer conditions and well perform. There
+is however considerable uncertainty in the future regeneration capabilities of those trees, and
+their capacity to stand natural disturbances. Further, we have a limited understanding of the
+forest-climate interaction in the fire regime. According to our metapopulation approach, even
+though boreal trees could establish and grow under warmer conditions, they also need to have a
+sufficiently high colonization rate to balance the extinction. If fires get more frequent with
+warmer temperatures, then we could face a no-analog situation where the boreal trees could suffer
+from climate change. This question remains open and will require substantial research given the
+evidence that temperature trees will not be able to response, at least over the mid-term, to the
+rapidly changing climate.
+
+Despite the clear support for the hypothesis that climate drives transitions among forest types at
+the boreal-temperate ecotone, our model predicts that the temperate forest will barely move
+northward, with a mean change of 14$\pm$2.0 km by the year 2095 with a rate of 740$\pm$0.11
+m.yr$^{-1}$. This finding is consistent with \citet{Iverson2004} which predicted range shift of
+10-20 kms for several species confined to the eastern half of the United States at the end of this
+century. In addition, analysis of fossil pollen distributions demonstrate migration rates
+from 100 to 1000 m.year during the quaternery period \citep{Davis1981,MacDonald1986,McLachlan2005}.
+However, our model includes several shortcomings which could lead to an over or underestimation of
+the migration predicted. If change in local climatic conditions modify life history strategies,  we
+may expect to see faster migration rates (i.e. younger maturation age and higher fecundity)
+\citep{Snell2014a}. Our model also assumes a constant dispersal ability of 900m. But we found no
+evidence that the change on this grid resolution will impact migration rate until the end of this
+century. Consequently, STM is robust to predict the spread of the temperate forest on the short term
+horizon (2000-2095).
+
+\subsubsection*{\uppercase{Acknowledgements}}
+\textit{This work was supported by the Forest Complexity Modeling program
+funded by a NSERC-CREATE grant and the QUICC-FOR project funded by a NSERC
+strategic grant 430393-12. We are grateful to the forest plots database providers: the
+Ministère de la Faune et des Parcs du Québec (CAN), the Ontario Ministry of
+Natural Resources and Forestry (CAN), the Minister of Natural Resources in New
+Brunswick (CAN), DOMTAR paper products company in Quebec (CAN) and the Forest
+Inventory and Analysis National Program (USA). We also thank Dan McKenney from
+the Canadian Forest Service for providing the past climate data.  We
+acknowledge the World Climate Research Program's Working Group on Coupled
+Modeling, (responsible for CMIP) which made available the Global Climate
+models and we thank Travis Logan from Ouranos for the downscaled version of
+the GCMs.}
+
+\clearpage
+\bibliographystyle{apalike}
+\bibliography{Master}
+\cleardoublepage
+
+\section*{\uppercase{Figures}}
+\vfill
+%------
+\begin{figure}[h]
+\begin{center}
+\input{../ms_4states_steve/figs/fig1_model.tex}
+\caption{Schematic representation of the model with states (B)oreal, (M)ixed, (T)emperate and (R)egeneration. Transitions from B, M and T to R
+result from disturbances. Succession results in a transition from R to B, M or T, and colonization
+results in transitions from either B or T to M.
+Competitive exclusion causes with transitions from M to either B or T. All of
+the transitions involving the arrival of a new species are dependent on
+dispersal and thus on the occupancy in the neighbourhood ($T+M$ or $B+M$).}
+\label{diag}
+\end{center}
+\end{figure}
+%------
+\vfill
+\clearpage
+
+%--------
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics[width=\textwidth]{../ms_4states_steve/figs/trans_prob_fig1.png}
+    \caption{Transition probabilities of all pathways from (B)oreal to (T)emperate. Each panel corresponds to one pathway (also represented by arrows from Fig.\ref{diag}). Transition probabilities were estimated by multinomial regression accounting for the temperature ($^{\circ}$C) on the y-axis and the precipitation (mm) on the x-axis.}
+    \label{nnet_space}
+  \end{center}
+\end{figure}
+\clearpage
+
+%--------
+%--------
+\begin{figure}[p]
+  \begin{center}
+  \includegraphics[width=\textwidth]{../ms_4states_steve/figs/turnover_states.png}
+    \caption{Frequency of transitions from (M)ixed to (T)emperate forest (left panel) and (B)oreal to (M)ixed (right panel) between initial (2015) and final (2095) time steps.
+    Transitions frequencies are obtained by dividing the number of transition observed by the number of simulations. Simulations used are only based on the first model scenario accounting for dispersal limitation, biotic and demographic constraints.}
+    \label{turnover}
+  \end{center}
+\end{figure}
+\clearpage
+%--------
+
+
+\begin{figure}[p]
+ \centering
+\includegraphics[width=\textwidth]{../ms_4states_steve/figs/propLat_wth_solved.pdf}
+\caption{
+Mean proportion of temperate forests (with 95\% quantiles) along a 520-km latitudinal band (in km,
+relative to the southernmost location of the band) showing the influence of dispersal and
+demographic constraints as well as long-term dynamics. We show the results of four modelling
+scenarios. The predictions of the STM for current climate (STM -- 2015; yellow) is the best estimate
+of the current state of the system including dispersal and demographic constraints. When this
+constrained model is projected into the future with climate change (STM -- 2095; red), we find very
+little increase in the proportion of temperate forest. When the constrained model is run for 10,000
+years at 2095 climate (STM -- 2095 + 10000; green), we see much greater movement, demonstrating that
+dispersal and demographic constraints introduce significant lags. Finally, the model solved at
+equilibrium (STM at equilibrium; blue) reveals that temperate forest will eventually expand to the
+entire gradient, but that this equilibrium is considerably farther than what was reached even with
+10,000 years of equilibration.}
+\label{mig_lat}
+\end{figure}
+
+\cleardoublepage
+
+\section*{\uppercase{Tables}}
+\vfill
+\begin{table}[h]
+\centering
+\caption{Summary of the results of a multinomial regression estimating the relative contributions of mean annual temperature ($\text{tp}$) and total annual precipitation ($\text{pp}$) to transitions to each of the four states ($\text{X}_{t+1}$), with samples sizes $n$.
+We show the influence of each component of a third-order polynomial as the change in AIC ($\Delta \text{AIC}$) that results from removing the parameter from the model, where a larger value indicates a more important parameter and where $\Delta \text{AIC} > 10$ indicates strong support for a parameter \citep{Burnham:2002tk}.
+To account for uneven observation intervals, we also included the time interval as a parameter in the model (and show its contribution as $\Delta \text{AIC}_{\text{time}}$).
+We also show the to the Mc-Fadden $\text{pseudo-}R^{2}$ as an indication of the goodness-of-fit of the full model.}
+\label{nnet_tab}
+\resizebox{\textwidth}{!}{\begin{tabular}{lccccccccccc}
+\hline
+\hline
+  $\text{X}_{t+1}$ & $n$ & $\Delta \text{AIC}_{\text{tp}}$ & $\Delta \text{AIC}_{\text{tp}^2}$ & $\Delta \text{AIC}_{\text{tp}^3}$ & $\Delta \text{AIC}_{\text{pp}}$  &
+  $\Delta \text{AIC}_{\text{pp}^2}$ &  $\Delta \text{AIC}_{\text{pp}^3}$
+  &  $\Delta \text{AIC}_{\text{tp:pp}}$ &  $\Delta \text{AIC}_{\text{time}}$ & $AIC_{tot}$ & $R^{2}$\\
+\hline
+T &16173 & 88.32 & 0.71 & 3.85 & -2.10 & 1.10 & -2.82 & 3.08 & 98.06 & 6757.46 & 0.15\\
+M & 16175 & 1.09 & 17.96 & 7.10 & 28.60 & -0.70 & 8.48 & 8.64 & 301.24 & 12034.80 & 0.04\\
+R & 503 &15.43 & 48.21 & 12.69 & -5.91 & 7.54 & -0.74 & 0.06 & 18.34 & 1546.64 & 0.22\\
+B & 16144 & 26.89 & 159.57 & 42.68 & -2.94 & 17.69 & 1.31 & -3.47 & 305.03 & 9013.28 & 0.11\\
+\hline
+\end{tabular}}
+\end{table}
+\vfill
+\clearpage
+
+\begin{table}[p]
+\centering
+\caption{Classification skill (TSS) for each state, where correct presences and absences indicate a predicted presence and absence and an observation that matched the predictions, and false presence/absence is the opposite.}
+\label{validation_tab}
+\begin{tabular}{ rlllll }
+\hline
+	& \textbf{B} & \textbf{T} & \textbf{M} & \textbf{R} & \textbf{Total} \\
+  \hline
+  \hline
+	a. Correct presences & 1380 & 6179 & 980  & 0     & 8539 \\
+	b. False presences   & 1940 & 1141 & 2175 & 285   & 5541 \\
+	c. False absences    & 830  & 3062 & 1648 & 0     & 5540 \\
+	d. Correct absences  & 9930 & 3698 & 9277 & 13795 & 36700 \\
+	\texbf{N}            & 3320 & 7320 & 3155 & 285   & 14080 \\
+  \hline
+	\textbf{TSS}      & 0.46 & 0.43 & 0.18 &       & 0.48 \\
+	Proportion correct (a+d/N) & 0.80 & 0.70 & 0.73 & 0.98 & 0.80 \\ \hline
+\end{tabular}
+\end{table}
+
+\clearpage
+%------------------------------
+%-----------------------------
+
+\section*{\uppercase{Supplementary materials}}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+
+\makeatletter
+\renewcommand{\thefigure}{S\@arabic\c@figure}
+\renewcommand{\thetable}{S\@arabic\c@figure}
+\makeatother
+
+\begin{landscape}
+\hfill
+\begin{figure}[h]
+  \begin{align*}
+    \frac{dT}{dt} &= R \cdot \alpha_T(T+M)[1-\alpha_B(B+M)] + M \cdot \theta\cdot \theta_T (1-\epsilon) - T \cdot \beta_B(B+M)(1-\epsilon) -T \cdot \epsilon \\
+    \frac{dB}{dt} &= R \cdot  \alpha_B(B+M)[1-\alpha_T(T+M)] + M \cdot \theta (1- \theta_T) (1-\epsilon) - B \cdot  \beta_T(T+M)(1-\epsilon) -B \cdot \epsilon \\
+    \frac{dR}{dt} &= \epsilon(M+B+T) - R \cdot \alpha_B(B+M)[1-\alpha_T(T+M)] - R \cdot \alpha_T(T+M)[1-\alpha_B(B+M)] - R \cdot \alpha_B(M + B) \alpha_T(M + T)\\
+    \frac{dM}{dt} &=  B \cdot \beta_T(T+M)(1-\epsilon) +  T \cdot \beta_B(B+M)(1-\epsilon) + R \cdot \alpha_B(B+M)[1-\alpha_T(T+M)] - M \cdot \theta \cdot \theta_T (1-\epsilon) - M \cdot \theta (1- \theta_T) (1-\epsilon) - M \cdot  \epsilon\\
+  \end{align*}
+  \caption{Differential equations representing the boreal-temperate ecotone dynamic through the time.
+  The rate of change in the proportion of patches occupied by each of the four forest states (T, B, R, and M for temperate, boreal, regenerating, and mixed forest, respectively) is a function of the local proportion of each of those states (again, T, B, R, and M) as well as the climate-specific transition parameters for each transition (Greek symbols; see main text and Fig. \ref{diag} for an explanation and diagrammatic representation).}
+  \label{EqSys}
+\end{figure}
+\hfill
+\end{landscape}
+\clearpage
+
+\begin{table}[p]
+	\begin{center}
+		\caption{Number of transitions observed between all paired observations.}
+		\label{transmat}
+		\begin{tabular}{c|cccc}
+			 \diagbox{From}{To} &	\textbf{B} &     \textbf{M} &     \textbf{R} &     \textbf{T} \\
+			\hline
+			\textbf{B} & 15357 &   794 & 203 &     0 \\
+			\textbf{M} &   302 & 14433 &  51 &   959 \\
+			\textbf{R} &   485 &    57 & 209 &    80 \\
+			\textbf{T} &     0 &   891 &  40 & 15134
+		\end{tabular}
+	\end{center}
+\end{table}
+
+\clearpage
+
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics[width=\textwidth]{../ms_4states_steve/figs/pseudo_validation.png}
+    \caption{The STM predictions of the present extent of temperate forest (colour scale) is largely concordant with expert-drawn maps (provided by the forest ministry of Quebec; MFFP 2016) delineating the extent of the temperate forest bioclimatic domain (red line), although there is some disagreement at the transition.
+	Projections were made using the STM with demographic, biotic, and dispersal constraints and show the proportion of simulations where temperate or mixed forest was present.}
+    \label{validation_fig}
+  \end{center}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[p]
+  \begin{center}
+    \includegraphics[width=\textwidth]{../ms_4states_steve/figs/trans_prob_SI.png}
+    \caption{Transition probabilities of all pathways from (T)emperate to (B)oreal. Each panel corresponds to one pathway which can be attached to one arrows of the centered STM diagram (presented in Fig.\ref{diag}). Transition probabilities were estimated by multinomial regression accounting for the temperature ($^{\circ}$C) on the y-axis and the precipitation (mm) on the x-axis.}
+    \label{nnet_space_TotB}
+  \end{center}
+\end{figure}
+
+\cleardoublepage

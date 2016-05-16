@@ -13,7 +13,7 @@
 % Pour le dépôt initial (recto),       utiliser  oneside.
 % Pour le dépôt final   (recto-verso), remplacer oneside par twoside.
 
-\documentclass[12pt,oneside,francais,letterpaper]{stylethese}
+\documentclass[12pt,twoside,letterpaper]{stylethese}
 % \documentclass[12pt,twoside,letterpaper]{stylethese}
 
 \raggedbottom % Évite les espaces trop gands entre chaque section.
@@ -54,16 +54,9 @@
 \usepackage{diagbox}
 \usepackage{titling}
 
-\usetikzlibrary{shapes, arrows, positioning}
-% State colors
-\definecolor{Temperate}{RGB}{254,172,24}
-\definecolor{Boreal}{RGB}{24,148,148}
-\definecolor{Regeneration}{RGB}{252,101,69}
-\definecolor{Mixed}{RGB}{135,209,134}
-\definecolor{States}{RGB}{51,51,51}
 
 % Ajout Cyril :
-\usepackage[linktocpage=true,linkcolor=cyan,citecolor=cyan,colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage[linktocpage=true,linkcolor=blue,citecolor=blue,colorlinks=true,urlcolor=blue]{hyperref}
 \usepackage[english,french]{cleveref}
 \usepackage{upgreek}
 \usepackage{textcomp}
@@ -99,13 +92,19 @@
 % Interligne 1 et 1/2.
 \setstretch{1.5}
 
+%%%%% Steve section
+\definecolor{States}{RGB}{51,51,51}
+\usetikzlibrary{shapes, arrows, positioning}
+\usepackage{pdflscape}
+
+
 % Pour créer un index (optionnel).
 
 \makeindex
 
 % Info sur la thèse (Titre, auteur, etc.)
 \Titre{BIOGÉOGRAPHIE ET DYNAMIQUE DE LA FORÊT TEMPÉRÉE NORDIQUE DANS UN CONTEXTE DE CHANGEMENTS CLIMATIQUES} % Mettre en majuscule!! (je nai pas résolu ce probleme...)
-\Auteur{Steve Vissault} 
+\Auteur{Steve Vissault}
 \Faculte{programme de maîtrise en gestion de la faune et de ses habitats}
 \Diplome{maître ès sciences}
 \Date{Janvier}{2016}
@@ -130,7 +129,7 @@
 % ----------------------------------------------------------------------%
 % 3- Corps de la thèse.                                                %
 % ----------------------------------------------------------------------%
-  
+
 \debutcorps
 \cleardoublepage
 % Utiliser      chapitres.tex pour une thèse (ou mémoire) traditionnelle.
@@ -152,12 +151,6 @@
 \input{concluGenerale.tex}
 \cleardoublepage
 
-% ----------------------------------------------------------------------%
-% 4 - Appendices de la thèse.                                           %
-% ----------------------------------------------------------------------%
-
-\input{annexeI.tex}
-\cleardoublepage
 
 % ----------------------------------------------------------------------%
 % 5 - Bibliographie.                                                    %
@@ -168,9 +161,8 @@
   \phantomsection\addcontentsline{toc}{chapter}{\MakeUppercase{\@references}}
   \makeatother
   \selectlanguage{english}
-  \bibdata{Master.bib}
   \bibliographystyle{elsarticle-harv} % Ici éditer le style
-  \bibliography{Master.bib} % Ici mettre le nom de la biblio, ici mylib.bib
+  \bibliography{Master} % Ici mettre le nom de la biblio, ici mylib.bib
 \end{singlespace}
 
 % ----------------------------------------------------------------------%
