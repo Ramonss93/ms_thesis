@@ -29,16 +29,42 @@ modification du régime de perturbation (p.ex. épidémies, verglas, chablis); p
 changements dans la répartition des espèces. Ce mémoire porte sur ce quatrième volet en s'interressant à la biogéographie et la dynamique de la communauté de la forêt tempérée
 nordique dans ce contexte de changements climatiques (c.a.d. son écotone).
 
-\section*{\uppercase{CADRE CONCEPTUEL}}
-\addcontentsline{toc}{section}{\protect\numberline{}ÉTAT DES CONNAISSANCES}
+\section*{Cadre conceptuel}
+\addcontentsline{toc}{section}{\protect\numberline{}Cadre conceptuel}
 
-La biosphère a déjà connu plusieurs épisodes de changements climatiques. L'étude des registres
+Les forêts ont déjà connu plusieurs épisodes de changements climatiques. L'étude des registres
 polliniques démontrent que ces fluctuations climatiques passées ont engendré des contractions et
-expansions dans l'aire de distribution des espèces (e.g., Davis and Shaw 2001). Aujourd'hui, l'effet
-des changements climatiques de ce siècle est déjà observable sur la diversité végétale et animale (Parmesan and Yohe 2003; Walther et
-al. 2002). Considérant l'ampleur et la vélocité des changements climatiques prédis pour le XXIe
-siècle (IPCC, 2015), la forêt tempérée nordique sera-t-elle en mesure de déplacer son aire de
-distribution assez rapidement pour suivre son enveloppe climatique?
+expansions dans l'aire de distribution des espèces (e.g. Davis and Shaw 2001). Aujourd'hui, l'effet
+des changements climatiques est déjà observable sur la diversité végétale
+\citep{Walther2002a,Parmesan2006}. Considérant l'augmentation de température de 4 à 7$^\circ$C
+\citep[Scénario RCP 8.5]{Climatique2015} attendu pour le Québec méridionale, plusieurs études
+prédisent que des espèces de la forêt tempérée (\textit{Fagus grandifolia}, \textit{Betula
+alleghaniensis}, \textit{Acer saccharum}, \textit{Quercus rubra}) vont étendre leur distribution
+vers le nord d'ici la fin du siècle \citep{Iverson2002,Sciences2014}. Cependant, ce changement dans
+la composition végétale pourrait s'avérer difficile considérant que les conditions microclimatiques
+que l’on retrouve sous les espèces boréales sont différentes de celles présentes en forêt tempérée.
+Au printemps, la température y est plus froide en raison de l'ombrage et par conséquent la neige y
+demeure plus longtemps, le sol y est plus humide et la litière est plus acide et plus fibreuse.
+Ainsi, même si les conditions climatiques à l'échelle de la région sont favorables à l'établissement
+des espèces tempérée, les microconditions particulières retrouvées en forêt boréale pourraient nuire à
+sa régénération \citep{DeFrenne2013,Lafleur2010}. Si c’est le cas, il est possible que la forêt
+tempérée nordique ne parvienne pas à s'installer en forêt boréale à la suite d’un réchauffement
+climatique et que cela contraigne l'expansion vers le nord de la distribution des espèces tempérées.
+
+Pour étudier les changemens d'aire de répartition d'une espèce, les modèles communément utilisé en
+biogéographie sont les mdèles d'enveloppes bioclimatiques. Ces derniers reposent sur des approches
+corrélatives mettant en relation la présence et l'abscence d'une espèce avec le climat. Ces outils
+présentent plusieurs limites puisqu'ils se basent sur la niche fondamentale et ne tiennent donc pas
+compte des facteurs biotiques (p. ex. capacité et taux de dispersion, compétition inter-spécifique)
+influençant l'aire de répartition des espèces [Guisan2005, Pearson2003]. Ces facteurs jouent
+pourtant un rôle prépondérant dans la dynamique d’un écosystème [Guisan2005, Araujo2007,
+Pearson2003]. Ces modèles assument également que la végétation ne présente pas de déséquilibre avec
+le climat et qu'elle répond de manière instantanée aux fluctuations climatiques [Austin2002]. Ils
+sont donc statiques et ne contiennent aucune composante dynamique (p. ex. les processus de
+dispersion, succession ou encore de perturbations tels que le feu ou le broutage) [Guisan2005,
+Austin2002].
+
+% Cette relation permet de dégager la niche fondamentale de l'espèce  communément appelé modèle d'enveloppe bioclimatiques. Parmis les approches mécanistiques, des modèles tels que Phenofit \citep{Letters2001} permettent de prendre en considération la phénologie des espèces en . 
 
 %
 % - Limite des arbres à la migration
@@ -63,7 +89,7 @@ distribution assez rapidement pour suivre son enveloppe climatique?
 %
 % Pour prédire des changemens d'aire de répartition, deux grandes familles de modèles éxistent:
 % 	- SDM (BIOMOD2, enveloppe bioclimatique)
-% 	- DVM (TreeMig, PhenoFit) tente de corriger par des approches plus mécanistiques en tenant compte de la phénologie des espèces (PhenoFit, Morin) et se capacité à se disperser (TreeMig, Liscke).
+% 	- DVM tente de corriger par des approches plus mécanistiques en tenant compte de la phénologie des espèces (PhenoFit, Morin), se capacité à se disperser (TreeMig, Liscke, SHIFT), démographie (CAIN, Vanderwhel).
 % 	- En couplant, SDM avec modèles de migration CAIN, SHIFT.
 % - Certains postulats ne sont pas approprié lorsque l'on tente de modéliser le réponse des arbres.
 % - Conclusion du paragraphe, nécéssité de se dirger vers une nouvelle générationde modèle
@@ -72,7 +98,7 @@ distribution assez rapidement pour suivre son enveloppe climatique?
 %
 % Les outils disponibles et limites pour étudier ce phénomène. Finir avec l'importance d'intégrer la dispersion et la démographie
 %
-% Les modèles d’enveloppe bioclimatique possèdent plusieurs limites. Ces outils se basent sur la niche fondamentale d’une espèce et ne tiennent donc pas compte des facteurs biotiques (p. ex. capacité et taux de dispersion, compétition inter-spécifique) influençant l’aire de répartition de cette dernière [Guisan2005, Pearson2003]. Ces facteurs jouent pourtant un rôle prépondérant dans la dynamique d’un écosystème [Guisan2005, Araujo2007, Pearson2003]. De plus, ces modèles statistiques assument que la végétation a atteint partiellement ou complètement son point d’équilibre avec le climat [Austin2002]. Ils sont donc statiques et ne contiennent aucune composante dynamique (p. ex. les processus de dispersion, succession ou encore différents agents de perturbations comme le feu ou le broutage) [Guisan2005, Austin2002].
+% Les modèles d’enveloppe bioclimatique possèdent plusieurs limites. Ces outils se basent sur la niche fondamentale d’une espèce et ne tiennent donc pas compte des facteurs biotiques (p. ex. capacité et taux de dispersion, compétition inter-spécifique) influençant l’aire de répartition de cette dernière [Guisan2005, Pearson2003]. Ces facteurs jouent pourtant un rôle prépondérant dans la dynamique d’un écosystème [Guisan2005, Araujo2007, Pearson2003]. De plus, ces modèles statistiques assument que la végétation a atteint partiellement ou complètement son point d’équilibre avec le climat [Austin2002]. Ils sont donc statiques et ne contiennent aucune composante dynamique (p. ex. les processus de dispersion, succession ou encore de perturbations tels que le feu ou le broutage) [Guisan2005, Austin2002].
 %
 % 	Limites:
 % 	- Réponse instantanée
@@ -95,7 +121,7 @@ distribution assez rapidement pour suivre son enveloppe climatique?
 %
 % \textbf{4e.}  Description du système et transition vers le cadre méthodologique
 %
-% Les conditions microclimatiques que l’on retrouve sous les espèces boréales sont différentes de celles présentes au sein de l’érablière. Au printemps, la température y est plus froide en raison de l’ombrage et par conséquent la neige y demeure plus longtemps, le sol y est plus humide et la litière est plus acide et plus fibreuse. Ainsi, même si les conditions climatiques à l’échelle de la région sont favorables à l’établissement de la régénération de l’érable à sucre, les conditions particulières retrouvées en forêt boréale pourraient nuire à sa régénération. Si c’est le cas, il est possible que l’érable à sucre ne parvient pas à s’installer en forêt boréale à la suite d’un réchauffement climatique et que cela affecte la migration vers le nord d’espèces tempérées.
+% 
 %
 % - Les approches de modélisation
 % - Étude des taux de migration

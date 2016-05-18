@@ -29,7 +29,33 @@
 
 \selectlanguage{frenchb}
 
-Je tiens dans un premier temps à remercier mon directeur Dominique Gravel pour m'avoir donné l'opportunité de réaliser cette maitrise. Je tiens également à remercier Isabelle Boulangeat et Matthew Talluto pour leurs implications et .
+Je tiens dans un premier temps à remercier mon directeur Dominique Gravel pour m'avoir donné
+l'opportunité de réaliser cette maîtrise. Dominique m'a redonné confiance et espoir dans toutes les
+étapes clés qui ont mené à la réalisation de ce mémoire. Il m'a impressionné par sa patience et ses
+nombreuses qualités humaines et m'a montré que la science est avant tout un travail d'équipe. 
+
+Je remercie également mes deux co-superviseurs, Isabelle Boulangeat et Matthew Talluto}, pour leur
+travail, leur implication et leur dévouement dans la réalisation de ce projet. Isabelle et Matt sont
+des personnes avec qui j'ai grandement apprécié travailler et dont j'ai beaucoup appris. J'espère
+beaucoup continuer à collaborer avec vous sur d'autres projets.
+
+Merci à Nicolas Casajus, Kevin Cazelles et Philippe Desjardins Proulx pour leurs conseils et aides
+techniques sur R et C qui ont été d'une grande valeur. Merci à Timothée Poisot pour la confiance et
+le soutien dont il a témoigné au début du projet. Un merci particulier à James Caveen pour sa
+disponibilité et son support. À travers nos discussions, James a su me communiquer sa passion et me
+donner les bons outils pour mener à bien se projet. 
+
+%Merci également à Marie-Josée Naud et Pierre Legagneux pour votre écoute
+
+Lors de ces deux (+0.75) années de maîtrise, j'ai également eu des partenaires de science (et de
+soirées) que je me dois d'immortaliser sur ce mémoire. Je remercie Claire Jacquet, Amaël Lesquin,
+Renaud McKinnon, Kevin Solarik, Kevin Cazelles, Camille Albouy, Hedvig Nenzén et Jonathan Brassard
+pour leurs complicités et pour avoir fait en sorte que ce lab ne soit pas juste une coquille vide.
+J'ai grandi personnellement et professionnellement grâce à plusieurs d'entre vous.  
+
+Je te tiens à remercier ma blonde pour sa patience exemplaire et pour m'avoir pardonner mes moments
+d'absence devant mon bol de céréales le matin. Enfin, je dédie ce mémoire à ma famille qui même de
+loin a su me témoigner un soutien indispensable pour tourner cette page. 
 
 % ----------------------------------------------------------------------%
 % 3- Avant-propos.                                                     %
@@ -39,27 +65,47 @@ Je tiens dans un premier temps à remercier mon directeur Dominique Gravel pour 
 
 \selectlanguage{frenchb}
 
-Je pourrais commencer cette avant-propos par, \textit{Depuis tout jeune, je souhaite comprendre
-comment la nature fonctionne...} mais je ne le ferais pas. Je n'ai pas atteri sur ce projet par
-simple mouvement brownien. Cette maitrise est plutôt l'aboutissement d'un parcours scolaire plus ou
-moins linéaire ponctué par des rencontres animé par ma curiosité et ma passion pour les sciences
+Je pourrais commencer cet avant-propos par, \textit{"Depuis tout jeune, je souhaite comprendre
+comment la nature fonctionne..."}, mais je ne le ferais pas. Je n'ai pas atterri sur ce projet par
+simple mouvement brownien. Cette maîtrise est plutôt l'aboutissement d'un parcours scolaire ponctué
+par des rencontres et des discussions, animé par ma curiosité et ma passion pour les sciences
 environnementales. Après une technique en Bioécologie et un baccalauréat en Biologie, je me suis
-apercu que mes centres d'interêts ne portaient pas sur une espèce en particulier. J'étais davantage
-fasciné par les lombrics, que par l'orignal, de par l'important rôle fonctionelle qu'ils
-remplissent. Ainsi, je ne souhaitais pas devenir un écologiste spécialiste mais plutôt un écologiste
-généraliste attiré par le désir de comprendre comment un écosystème fonctionne. Mon implication au
-sein du laboratoire de Dominique Gravel, durant mon baccalauréat, m'a permise d'être initier à
-l'univers de la modélisation et de l'écologie théorique. Ce domaine offrait le cadre approprié pour
-réalisé ma maitrise. Mon cheminement n'est donc pas animé par un simple mouvement brownien, mais
-plutot par une passion, une réfléxion, des rencontres et une opportunité qui ont permis de
-déterminer qui je suis aujourd'hui.
+aperçu que mes centres d'intérêt ne portaient pas sur une espèce en particulier, mais plutôt sur la
+diversité des organismes et les rôles fonctionnels qu'ils remplissent au sein d'un écosystème.
+J'étais autant fasciné par les espèces du genre \textit{Lombricus sp.} que par l'orignal. Ma
+curiosité me poussait donc vers la compréhension des mécanismes écologiques à une plus large
+échelle. Mon implication au sein du laboratoire de Dominique Gravel durant mon baccalauréat, m'a
+permise d'être initié à l'écologie théorique et la biogéographie ainsi qu'à l'approche scientifique
+par modélisation. Ce laboratoire m'offrait donc un cadre idéal pour réaliser ma maîtrise et
+satisfaire cette curiosité. 
 
-Dimension éco-informatique,
+\noindent\textbf{Reproductibilité de mes travaux}
 
-Allez retournons
-La repoductibitité est un des critères scientifiques (Popper)
+Le père du modèle hypothético-déductif, Karl Popper énonçait que l'un des critères fondamentaux dans
+la réalisation d'une bonne étude scientifique réside dans la reproductibilité de la méthode. Pour
+atteindre ce critère, des outils informatiques permettent aujourd'hui de dépasser la simple
+description méthodologique sur papier. Dans ce contexte, l'ensemble de mes scripts et programmes
+utilisé pour la réalisation de ce projet sont disponibles librement via une plateforme internet.
+Ainsi, le code nécessaire à la conceptualisation de la base de données QUICC-FOR est accessible à
+travers le dépôt: \url{https://github.com/QUICC-FOR/QUICCSQL}. Ce dépôt ne contient pas les données
+biologiques (celles-ci demeurant la propriété des Ministères ou entreprises privés partenaires du
+projet) mais seulement l'information permettant de reproduire l'architecture de la base de données
+SQL. Les scripts nécessaires à l'extraction des données pour la calibration et les projections du
+modèle sont accessibles à cette adresse \url{https://github.com/QUICC-FOR/STModel-Data}. Ils
+permettent de retracer l'ensemble des filtres, et des étapes de manipulation des données nécessaires à
+la réalisation des analyses. Le modèle d'automate cellulaire utilisé (States and Transitions model,
+STM) pour les simulations est également disponible
+(\url{https://github.com/QUICC-FOR/STModel-Simulation}), ainsi que les étapes de calibration
+(\url{https://github.com/QUICC-FOR/STModel-Calibration}) pour l'obtention des paramètres par la
+méthode de maximum de vraisemblance. Enfin, le post-traitement des simulations et les codes
+nécessaires à la production des figures est disponibles à cette adresse:
+\url{https://github.com/QUICC-FOR/STModel-CompAnalysis}. La mise à disposition de ces ressources
+constitue un gage de transparence auprès de mes pairs. Elle me permet également de valoriser mes
+compétences professionnelles en programmation scientifique. Enfin, elle garantit la possibilité de
+conduire les mêmes analyses dans les 20 ou 30 prochaines années lorsque de nouvelles
+observations/données seront accessibles; un critère indéniable lorsque l'on connaît la lenteur dans
+la réponse d'un écosystème forestier à des changements environnementaux.
 
-[Cette page est facultative; l’éliminer si elle n’est pas utilisée. L’avant-propos ne doit pas être confondu avec l'introduction. Il n’est pas d’ordre scientifique alors que l’introduction l’est. Il s’agit d'un discours préliminaire qui permet notamment à l'auteur d'exposer les raisons qui l'ont amené à étudier le sujet choisi, le but qu'il veut atteindre, ainsi que les possibilités et les limites de son travail. On peut inclure les remerciements à la fin de ce texte au lieu de les présenter sur une page distincte.]
 
 % ----------------------------------------------------------------------%
 % 4- Resume/Abstract                                                           %
