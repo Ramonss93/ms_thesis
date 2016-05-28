@@ -30,33 +30,32 @@
 \selectlanguage{frenchb}
 
 Je tiens dans un premier temps à remercier mon directeur Dominique Gravel pour m'avoir donné
-l'opportunité de réaliser cette maîtrise. Dominique m'a redonné confiance et espoir dans toutes les
-étapes clés qui ont mené à la réalisation de ce mémoire. Il m'a impressionné par sa patience et ses
-nombreuses qualités humaines et m'a montré que la science est avant tout un travail d'équipe. 
+l'opportunité de réaliser cette maîtrise. Dominique m'a redonné confiance en moi et a su me redonner
+espoir dans mes capacités en m'accompagnant à travers les étapes clés de ce mémoire. Il m'a impressionné par sa patience et ses nombreuses qualités humaines et m'a montré
+que la science est avant tout un travail d'équipe.
 
-Je remercie également mes deux co-superviseurs, Isabelle Boulangeat et Matthew Talluto}, pour leur
+Je remercie également mes deux co-superviseurs, Isabelle Boulangeat et Matthew Talluto, pour leur
 travail, leur implication et leur dévouement dans la réalisation de ce projet. Isabelle et Matt sont
-des personnes avec qui j'ai grandement apprécié travailler et dont j'ai beaucoup appris. J'espère
-beaucoup continuer à collaborer avec vous sur d'autres projets.
+des personnes avec qui j'ai grandement apprécié travailler et desquels j'ai beaucoup appris. J'espère continuer à collaborer avec eux sur d'autres projets futurs.
 
 Merci à Nicolas Casajus, Kevin Cazelles et Philippe Desjardins Proulx pour leurs conseils et aides
 techniques sur R et C qui ont été d'une grande valeur. Merci à Timothée Poisot pour la confiance et
 le soutien dont il a su me témoigner au début du projet. Un merci particulier à James Caveen pour sa
-disponibilité et son support. James a su me communiquer sa passion et me donner les bons outils pour
-mener à bien se projet. 
+disponibilité et son support. Il a su me communiquer sa passion et m'a fourni les bons outils pour
+mener à bien se projet.
 
 %Merci également à Marie-Josée Naud et Pierre Legagneux pour votre écoute
 
 Lors de ces deux (+0.75) années de maîtrise, j'ai également eu des partenaires de science (et de
 soirées) que je me dois d'immortaliser sur ce mémoire. Je remercie Claire Jacquet, Amaël Lesquin,
 Renaud McKinnon, Idaline Laigle, Kevin Solarik, Kevin Cazelles, Camille Albouy, David Beauchesne,
-Hedvig Nenzén et Jonathan Brassard pour leurs complicités et pour avoir fait en sorte que ce
+Hedvig Nenzén et Jonathan Brassard pour leurs complicité et pour avoir fait en sorte que ce
 laboratoire ne soit pas juste une coquille vide. J'ai grandi personnellement et professionnellement
-grâce à plusieurs d'entre vous.  
+grâce à plusieurs d'entre vous.
 
-Je te tiens à remercier ma blonde pour sa patience exemplaire et pour m'avoir pardonner mes moments
+Je tiens à remercier ma blonde pour sa patience exemplaire et pour m'avoir pardonné mes moments
 d'absence devant mon bol de céréales le matin. Enfin, je dédie ce mémoire à ma famille qui même de
-loin a su me témoigner un soutien indispensable pour tourner cette page. 
+loin a su me témoigner un soutien indispensable pour tourner cette page.
 
 % ----------------------------------------------------------------------%
 % 3- Avant-propos.                                                     %
@@ -67,45 +66,45 @@ loin a su me témoigner un soutien indispensable pour tourner cette page.
 \selectlanguage{frenchb}
 
 Je pourrais commencer cet avant-propos par, \textit{"Depuis tout jeune, je souhaite comprendre
-comment la nature fonctionne..."}, mais je ne le ferais pas. Je n'ai pas atterri sur ce projet par
+comment la nature fonctionne..."}, mais je ne le ferai pas. Je n'ai pas abouti sur ce projet par
 simple mouvement brownien. Après une technique en Bioécologie et un baccalauréat en Biologie, je me
 suis aperçu que mes centres d'intérêt ne portaient pas sur une espèce en particulier, mais plutôt
 sur la diversité des organismes et les rôles fonctionnels qu'ils remplissent au sein d'un
 écosystème. J'étais autant fasciné par les espèces du genre \textit{Lombricus sp.} que par
 l'orignal. Ma curiosité me poussait donc vers la compréhension des mécanismes écologiques à une plus
-large échelle. Mon implication au sein du laboratoire de Dominique Gravel durant mon baccalauréat,
+grande échelle. Mon implication au sein du laboratoire de Dominique Gravel durant mon baccalauréat,
 m'a permise d'être initié à l'écologie théorique et la biogéographie ainsi qu'à l'approche
 scientifique par modélisation. Ce laboratoire m'offrait donc un cadre idéal pour réaliser ma
-maîtrise et satisfaire cette curiosité. 
+maîtrise et satisfaire cette curiosité.
 
 \noindent\textbf{Reproductibilité de mes travaux}
 
-Le père du modèle hypothético-déductif, Karl Popper énonçait que l'un des critères fondamentaux dans
-la réalisation d'une bonne étude scientifique réside dans la reproductibilité de la méthode. Pour
-atteindre ce critère, des outils informatiques permettent aujourd'hui de dépasser la simple
+Le père du modèle hypothético-déductif, Karl Popper, énonçait que l'un des critères fondamentaux
+dans la réalisation d'une bonne étude scientifique réside dans la reproductibilité de la méthode.
+Pour atteindre ce critère, des outils informatiques permettent aujourd'hui de dépasser la simple
 description méthodologique sur papier. Dans ce contexte, l'ensemble de mes scripts et programmes
-utilisé pour la réalisation de ce projet sont disponibles librement via une plateforme internet (système de contrôle de version).
-Ainsi, le code nécessaire à la conceptualisation de la base de données QUICC-FOR est accessible à
-travers le dépôt: \url{https://github.com/QUICC-FOR/QUICCSQL}. Ce dépôt ne contient pas les données
-biologiques (celles-ci demeurant la propriété des Ministères ou entreprises privés partenaires du
-projet) mais seulement l'information permettant de reproduire l'architecture de la base de données
-SQL. Les scripts nécessaires à l'extraction des données pour la calibration et les projections du
-modèle sont accessibles à cette adresse \url{https://github.com/QUICC-FOR/STModel-Data}. Ils
-permettent de retracer l'ensemble des filtres, et des étapes de manipulation des données nécessaires à
-la réalisation des analyses. Le modèle d'automate cellulaire utilisé (States and Transitions model,
-STM) pour les simulations est également disponible
-(\url{https://github.com/QUICC-FOR/STModel-Simulation}), ainsi que les étapes de calibration
-(\url{https://github.com/QUICC-FOR/STModel-Calibration}) pour l'obtention des paramètres par la
-méthode de maximum de vraisemblance. Enfin, le post-traitement des simulations et les codes
-nécessaires à la production des figures est disponibles à cette adresse:
-\url{https://github.com/QUICC-FOR/STModel-CompAnalysis}. 
+utilisé pour ce projet sont disponibles librement via une plateforme internet
+(système de contrôle de version). Ainsi, le code nécessaire à la conceptualisation de la base de
+données QUICC-FOR est accessible à travers le dépôt: \url{https://github.com/QUICC-FOR/QUICCSQL}. Ce
+dépôt ne contient pas les données biologiques (celles-ci demeurant la propriété des Ministères ou
+entreprises privées partenaires du projet) mais seulement l'information permettant de reproduire
+l'architecture de la base de données SQL. Les scripts nécessaires à l'extraction des données pour la
+calibration et les projections du modèle sont accessibles à cette adresse
+\url{https://github.com/QUICC-FOR/STModel-Data}. Ils permettent de retracer l'ensemble des filtres
+et des étapes de manipulation des données nécessaires aux analyses. Le modèle
+d'automate cellulaire utilisé (States and Transitions model, STM) pour les simulations est également
+disponible (\url{https://github.com/QUICC-FOR/STModel-Simulation}), ainsi que les étapes de
+calibration (\url{https://github.com/QUICC-FOR/STModel-Calibration}) pour l'obtention des paramètres
+par la méthode de maximum de vraisemblance. Enfin, le post-traitement des simulations et les codes
+nécessaires à la production des figures sont disponibles à cette adresse:
+\url{https://github.com/QUICC-FOR/STModel-CompAnalysis}.
 
-La mise à disposition de ces ressources
-constitue un gage de transparence auprès de mes pairs. Elle me permet également de valoriser mes
-compétences professionnelles en programmation scientifique. Enfin, elle garantit la possibilité de
-conduire les mêmes analyses dans les 20 ou 30 prochaines années lorsque de nouvelles
-observations/données seront accessibles; un critère indéniable lorsque l'on connaît la lenteur dans
-la réponse d'un écosystème forestier à des changements environnementaux.
+La mise à disposition de ces ressources constitue un gage de transparence auprès de mes pairs. Elle
+me permet également de valoriser mes compétences professionnelles en programmation scientifique.
+Enfin, elle garantit la possibilité de conduire les mêmes analyses dans les 20 ou 30 prochaines
+années lorsque de nouvelles observations/données seront accessibles; un critère indéniable lorsque
+l'on connaît la lenteur à laquelle un écosystème forestier se réajuste aux changements
+environnementaux.
 
 
 % ----------------------------------------------------------------------%
@@ -117,27 +116,25 @@ la réponse d'un écosystème forestier à des changements environnementaux.
 
   De nombreuses espèces ne migrent pas assez vite pour suivre la rapidité des changements
   climatiques. Les arbres sont bien connus pour éprouver de longs délais dans leurs réponses au
-  climat parce qu'ils sont sessiles, possèdent une forte longévité et disposent de faible capacité
-  de dispersion. Les approches actuelles pour prédire l'aire de répartition future des espèces,
+  climat parce qu'ils sont sessiles, qu'ils possèdent une forte longévité et qu'ils disposent d'une faible capacité de dispersion. Les approches actuelles pour prédire l'aire de répartition future des espèces,
   telles que les modèles d'enveloppe climatique, ne peuvent pas tenir compte de ces particularités
-  propres aux écosystèmes forestiers, car ils assument une dispersion infinie et une réponse
+  propres aux écosystèmes forestiers, car elles assument une dispersion infinie et une réponse
   instantanée aux changements climatiques. Nous proposons une nouvelle approche de modélisation
   basée sur la théorie des métapopulations pour tenir compte de cette capacité limitée de
   dispersion, des interactions biotiques et de la démographie propre à la forêt tempérée nordique du
   nord-est de l'Amérique du Nord. Notre objectif est d'évaluer si ce biome forestier sera en mesure
   de suivre sa niche climatique d'ici la fin de ce siècle. Nous avons effectué des simulations de
-  l'écotone entre la forêt boréale et tempérée en utilisant un modèle d'états et de transitions
+  l'écotone entre la forêt boréale et la forêt tempérée en utilisant un modèle d'états et de transitions
   (STM), dans lequel les communautés forestières sont classées dans 4 états: boréales, tempérées,
   mélangées et en régénération après une perturbation. Les transitions entre les états sont
   calibrées à partir des inventaires des parcelles permanentes présents aux États-Unis et au Canada.
   Les résultats des simulations du modèle indiquent que la forêt tempérée se déplacera seulement de
   14 $\pm$ 2,0 km alors qu'un modèle de distribution d'espèces standard prédit un déplacement de
   238,79 $\pm$ 34,24 km. Les simulations de l'écotone forestier mettent également en évidence que la
-  majorité des transitions attendues seront une conversion des peuplements mixtes vers des
+  majorité des transitions attendues seront une conversion des peuplements mélangées vers des
   peuplements purement décidus. L'utilisation du modèle avec un scénario de dispersion infinie
-  révèle que les interactions biotiques et la démographie sont les facteurs les plus importants qui
-  limitent la capacité d'expansion du biome de la forêt tempérée. En conclusion, la forêt tempérée
-  possède une faible résilience au changement climatique en raison de sa lente démographie et des
+  révèle que les interactions biotiques et la démographie sont les facteurs les plus importants limitant la capacité d'expansion du biome de la forêt tempérée. En conclusion, la forêt tempérée
+  possède une faible résilience aux changements climatiques en raison de sa lente démographie et des
   fortes interactions compétitives avec les espèces boréales.
 
 
