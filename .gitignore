@@ -131,6 +131,6 @@ sympy-plots-for-*.tex/
 *.vrt
 
 #Mac and R stuff
-*.DStore
+*.DS_Store
 *.RData
 *.Rhistory
