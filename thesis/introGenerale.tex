@@ -36,30 +36,35 @@ climatiques à l'échelle de la région sont favorables à l'établissement des 
 microconditions particulières à la forêt boréale pourraient nuire à l'établissement de ces espèces \citep{DeFrenne2013,Lafleur2010}. Si c’est le cas, il est possible que la forêt tempérée
 nordique ne parvienne pas à s'installer en forêt boréale à la suite d’un réchauffement climatique.
 
-Les prédictions de changements de l'aire de répartition des espèces sont établies à l'aide de modèles dits de distribution d'espèce. Cet ensemble hétérogène d'outil statistique repose essentiellement sur l'établissement de corrélations entre l'occurence d'une espèce et des variables pédoclimatiques \citep{Pearson2003b, Guisan2005a}.
-Malgrè le succès de ces modèles dont témoignent l'abondante litérature, ils demeurent lacunaires. Par exemple, ils postulent majoritairement que les espèces sont indépendantes et donc que les facteurs biotiques (p. ex. capacité et taux de dispersion, compétition inter-spécifique) n'affectent pas l'aire de répartition de l'éspèce \citep{Guisan2005a,Pearson2003b}. Ils assument également que la
-distribution de l'espèce est en équilibre avec le climat et qu'elle répond de manière instantanée à
-des changements \citep{Austin2002}. Ils sont également statiques en excluant des processus
-écologiques tels que la dispersion, la succession végétale ou encore les régimes de perturbations
-(le feu, l'herbivorie etc.) \citep{Austin2002,Guisan2005a}. De part ces contraintes, les
-modèles d'enveloppes climatiques ne sont pas appropriés pour prédire les changements d'aire de
-répartition des écosystèmes forestiers. En effet, l'expansion ou la contraction des aires de
-répartition est un processus écologique lent caractérisé par la faible capacité des arbres à se
+Les prédictions de changements de l'aire de répartition des espèces sont établies à l'aide de
+modèles dits de distribution d'espèce. Cet ensemble hétérogène d'outil statistique repose
+essentiellement sur l'établissement de corrélations entre l'occurence d'une espèce et des variables
+pédoclimatiques \citep{Pearson2003b, Guisan2005a}. Malgrè le succès de ces modèles dont témoignent
+l'abondante litérature, ils présentent certaines lacunes. Par exemple, ils postulent majoritairement
+que les espèces sont indépendantes et donc que les facteurs biotiques (p. ex. capacité et taux de
+dispersion, compétition inter-spécifique) n'affectent pas l'aire de répartition de l'éspèce
+\citep{Guisan2005a,Pearson2003b}. Ils assument également que la distribution de l'espèce est en
+équilibre avec le climat et qu'elle répond de manière instantanée à des changements
+\citep{Austin2002}. Ils sont également statiques en excluant des processus écologiques tels que la
+dispersion, la succession végétale ou encore les régimes de perturbations (le feu, l'herbivorie
+etc.) \citep{Austin2002,Guisan2005a}. De part ces contraintes, les modèles de distribution d'espèces
+ne sont pas appropriés pour prédire les changements d'aire de répartition des écosystèmes
+forestiers.
+
+L'expansion ou la contraction des aires de répartition d'un espèce arborescente ou d'un biome
+forestier est un processus écologique lent caractérisé par la faible capacité des arbres à se
 disperser, leurs fortes longévités, leurs faibles taux de croissance et enfin la forte compétition
-interspécifique présente au sein des peuplements \citep{Renwick2014,Vanderwel2014}.
-
-% - Conséquences: source-puit, persistence
-% - Sous-estimation de la niche fondamentale de l'espèce.
-% - Situtation de déséquilibre
-
-Les modèles de dynamique de la végétation
-(\textit{Dynamic vegetation models}, DVMs) permettent de combler certaines de ces limites par des
-approches plus mécanistiques \citep{Snell2014a}. Ils intègrent par exemple la phénologie des espèces
-\citep{Letters2001,Morin2008}, ou encore leurs capacités de dispersion \citep{Nobis2014,Iverson2004}
-et peuvent ajouter une composante démographique \citep{Lischke2006a,Vanderwel2014}. Ces
-modèles améliorent la qualité des prédictions mais ne s'interressent pas à comparer la
-contribution de chaque mécanisme écologique (dispersion, interaction biotiques et démographie) afin
-de mieux comprendre leurs effets sur la capacité de migration des espèces.
+interspécifique présente au sein des peuplements \citep{Renwick2014,Vanderwel2014}. Les modèles de
+dynamique de la végétation (\textit{Dynamic vegetation models}, DVMs) permettent de combler
+certaines de ces limites par des approches plus mécanistiques \citep{Snell2014a}. Ils intègrent par
+exemple la phénologie des espèces \citep{Letters2001,Morin2008}, ou encore leurs capacités de
+dispersion \citep{Nobis2014,Iverson2004} et peuvent ajouter une composante démographique
+\citep{Lischke2006a,Vanderwel2014}. Ces modèles améliorent la qualité des prédictions mais ne nous
+permettent pas d'évaluer la dynamique spatiale d'extinction et de colonisation des espèces durant la
+phase de réajustement aux nouvelles conditions. Nous avons donc développé à travers cet étude un
+nouveau modèle, basé sur le processus de migration (\textit{"process based model"}) et permettant de
+mieux comprendre l'effet de la dispersion, des interactions biotiques et de la démographie sur la
+capacité de migration des espèces.
 
 \section*{Objectifs de l'étude}
 \addcontentsline{toc}{section}{\protect\numberline{}Objectifs de l'étude}
@@ -72,10 +77,10 @@ Pour atteindre ces objectifs, nous utilisons un modèle d'états et de transitio
 Transitions model -- STM}) dérivé de la théorie des métapopulations. Il permet de simuler la
 dynamique de l'écotone entre la forêt boréale et la forêt tempérée. L'écotone est classifié en
 quatre communautés forestières distinctes, soit (B)oréale, (T)empérée, (M)élangée et en
-(R)égénération après une perturbation -- que l'on appelle des "états". Les probabilités de transition
-entre les états sont calibrées sur les transitions observées à partir des inventaires des parcelles
-forestières permanentes situées aux États-Unis et au Canada (1960-2012). En résolvant le système
-d'équation du modèle, nous pouvons prédire l'état attendu à l'équilibre avec les conditions
+(R)égénération après une perturbation -- que l'on appelle des "états". Les probabilités de
+transition entre les états sont calibrées sur les transitions observées à partir des inventaires des
+parcelles forestières permanentes situées aux États-Unis et au Canada (1960-2012). En résolvant le
+système d'équation du modèle, nous pouvons prédire l'état attendu à l'équilibre avec les conditions
 climatiques. Nous avons d'abord implémenté le modèle calibré à l'intérieur d'un automate cellulaire
 afin de simuler la dynamique spatiale et temporelle de l'écotone boréal-tempéré. En utilisant le
 pire scénario de changement climatique (forcage radiatif, RCP 8.5), les simulations montrent que la
@@ -90,15 +95,3 @@ dispersion illimitée, (ii) scénario sans contrainte de démographie, (iii) ré
 l'équilibre. La comparaison des résultats de ces simulations révèle que les interactions biotiques
 et la démographie sont les facteurs les plus importants limitant la capacité d'expansion du biome de
 la forêt tempérée vers le nord.
-
-% Le modèle de diffusion tel permet de voir l'expansion de la forêt tempérée nordique comme un processus structuré autours de la démographie (la survie et la croissance des arbres) et la dispersion (dissemination des graines) \citep{Schurr2012,Travis2013}.
-% . À une échelle biogéographique, ces changements sont stru
-% - Processus lent structuré par le climat.
-% - Lien vers le climat
-% - Lien vers la niche (persistence et établissement)
-% - Lien vers les metapops (persistence et établissement résulte d'une suite d'évènement de colonization et d'extinction)
-% - Transfert vers le STM
-% Ces évènement peuvent être reporter à une suite d'évènements de colonisation et d'extinction à une échelle locale. Si le taux de colonization excède le taux d'extinction alors l'éspèce sera en mesure de s'établir et persister au sein du peuplement.
-
-% \section*{\uppercase{OBJECTIFS DE L'ÉTUDE}}
-% - À partir des données disponibles
