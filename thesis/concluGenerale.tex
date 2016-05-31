@@ -1,29 +1,81 @@
-[C’est dans cette section qu’est mise en évidence la portée de l’étude ainsi que les liens entre les articles ou autres textes et une ouverture sur les perspectives de recherche dans le domaine concerné. On y fait état des limites de la recherche et on y propose, le cas échéant, des pistes nouvelles pour de futures recherches ou des façons de développer de nouvelles applications. La conclusion ne doit pas présenter de nouveaux résultats ni de nouvelles interprétations. Elle doit être rédigée de manière à faire ressortir la cohérence de la démarche.]
+% [C’est dans cette section qu’est mise en évidence la portée de l’étude ainsi que les liens entre les articles ou autres textes et une ouverture sur les perspectives de recherche dans le domaine concerné. On y fait état des limites de la recherche et on y propose, le cas échéant, des pistes nouvelles pour de futures recherches ou des façons de développer de nouvelles applications. La conclusion ne doit pas présenter de nouveaux résultats ni de nouvelles interprétations. Elle doit être rédigée de manière à faire ressortir la cohérence de la démarche.]
 
-Le modèle d'états et de transitions développé dans le cadre de cet étude a permis dévoiler que la forêt tempérée nodique ne sera pas en mesure de suivre sa niche climatique d'ici la fin du siècle. Cet incapacité est expliquable par la lente démographie des espèces tempérées et les fortes interactions biotiques avec les espèces boraéles. Ces deux composantes régissent la vitesse à laquelle les transitions des peuplements tempérée vers
-
-Les modèles de dynamique de la végétation
-(\textit{Dynamic vegetation models}, DVMs) permettent de combler certaines de ces limites par des
-approches plus mécanistiques \citep{Snell2014a}. Ils intègrent par exemple la phénologie des espèces
+Cet étude a permis de démontrer que par une approche intégrative simple mettant en relation la
+théorie des métapopulations et un modèle d'états et de transitions (STM), il est possible d'intégrer
+implicitement ou explicitement des mécanismes écologiques tels que la dispersion, les interactions
+biotiques et la démographie. Ces composantes écologiques sont essentielles afin de permettre
+d'obtenir une prédiction réaliste de l'expansion de l'aire de distribution des espèces arborescente
+ou d'une communauté forestière. Plusieurs modèles de dynamique de la végétation (\textit{Dynamic
+vegetation models}, DVMs) permettent aujourd'hui cette intégration par des approches plus
+mécanistiques \citep{Snell2014a}. Ils intègrent par exemple la phénologie des espèces
 \citep{Letters2001,Morin2008}, ou encore leurs capacités de dispersion \citep{Nobis2014,Iverson2004}
 et peuvent ajouter une composante démographique \citep{Lischke2006a,Vanderwel2014}. Ces modèles
 améliorent la qualité des prédictions, mais ne s'interressent pas à la contribution de chaque
 mécanisme écologique (dispersion, interaction biotiques et démographie) afin de mieux comprendre
 leurs effets sur la capacité d'expansion de l'aire de distribution d'une espèce ou d'une
-communautée. Nous avons développés à travers cet étude une nouvelle méthologie permettant de tester
+communautée. En simulant la dynamique spatiale de l'écotone, nous avons réussi à isoler
+ces effets et dévoilé l'importance de la démographie et des interactions biotiques comme contrainte à l'envahissement des espèces de la forêt tempérée en forêt boréale.
 
-Limites du modèle:
-Postulat
-- Change in species assenblage
-- Evolution of the niche, taille de la niche peut changer dans le temps
+\section*{Limites de l'approche}
 
-Contribution sur le plan écologique
-- Comprendre et prédire la dynamique spatiale de l'écotone
-- Importance pour les aménagistes
-- Adaptation aux CC
-- Aménager pour une cible en mouvement
+% Adaptation peut améner vers une modification des taux de transition
 
-Contribution sur le plan méthodologique
-- Simplicité du modèle
-- Modèle qui inclus implicitement la démographie (proba), les interaction biotiques (cells), distance de colonisation.
-- Étendre la théorie des métapops à la biogéo
+% Changements dans les assemblages des espèces (composition de la communauté)
+
+% Sous-estimation du taux de migration
+Les projections du modèle d'états et de transitions ont également montrés que la forêt tempérée
+nordique ne sera pas en mesure de suivre sa niche climatique d'ici la fin du siècle XXI$^e$ siècle.
+La vitesse d'expansion de l'aire de distribution de la forêt tempérée de 740$\pm$0.11 m.an$^{-1}$
+concorde avec les vitesses enregistrées de 100-1000 mètres par an pour la période du Quaternaire
+\citep{Davis1981}. Ces vitesses obtenues par l'analyse des registres fossile présentent cependant
+une forte variabilité souvent associé à des évènements de dispersion longue distance (Paradoxe de
+Reid's); rendu possible par des organismes possédant une forte mobilité tel que les oiseaux
+\citep{Clark1998}. Le scénario, intégrant une dispersion limité, ne permet pas de reproduire ces
+évènements stochastiques de dispersion. Ces évènements peuvent pourtant permettre à une population
+de s'implanter et de persister, si les conditions climatiques sont favorables, au delà de leur
+limites biogéographiques \citep{Clark1998}. L'établissement de population par ce mécanisme pourrait
+impliquer une sous-estimation de la vitesse d'expansion du biome tempéré par le STM.  Sans
+évènements de dipersion par longue distance, nous nous attendons à ce que la distance latitudinal
+augmente entre la disribution potentielle de la communauté tempérée (sa niche climatique; $r>0$) et
+sa distribution réalisée au cours des prochaines décénnies. Ce déséquilibre entre les deux
+distributions a déjà été observé pour plusieurs espèces européenne \citep{Svenning2004}. La présence
+de ce déséquilibre présente plusieurs implications pour l'aménagement de nos écosystèmes forestier.
+
+\section*{Aménagement écosystémique}
+
+Comprendre la dynamique de . Isoler les mécanismes de conversions des peuplements indispensable à un aménagements durables de nos forêts. Cet enjeux est primordiale pour les aménagistes du territoire forestier du Québec dans le contexte d'aménagement écosystémique qui vise à restreindre l'écart entre la forêt natuelle et la forêt aménagé.
+
+Pour terminer, la conceptualisation du modèle et son implémentation à l'intérieu  r d'un automate
+cellulaire ont permis de simuler la dynamique spatiale de deux grands biomes forestiers (zone de
+végétations) dominant le paysage forestier du Québec. Les projections des différents scénarios du
+modèle ont permises d'isoler les mécanismes écologiques reponsables de la conversion des peuplements
+(soit tempéré vers boréal et inversement). Cette compréhension est indispensable pour un aménagement
+écosystémique de nos forêts et mettre en place des mesures d'adaptation aux changements climatiques.
+
+- Nécessité d'inclure des scénarios d'aménagement sylvicoles pour permettre de connaitre l'effet du retrait de biomasse sur la capacité de migration des espèces.
+
+
+%
+%
+% Adaptation et taux de transition
+
+
+
+% - Pivilégier une composition mixte pour éviter une conversion
+%
+% Limites du modèle:
+% Postulat
+% - Change in species assenblage
+% - Evolution of the niche, taille de la niche peut changer dans le temps
+%
+% Contribution sur le plan écologique
+% -
+% - Comprendre et prédire la dynamique spatiale de l'écotone
+% - Importance pour les aménagistes
+% - Adaptation aux CC
+% - Aménager pour une cible en mouvement
+%
+% Contribution sur le plan méthodologique
+% - Simplicité du modèle
+% - Modèle qui inclus implicitement la démographie (proba), les interaction biotiques (cells), distance de colonisation.
+% - Étendre la théorie des métapops à la biogéo
