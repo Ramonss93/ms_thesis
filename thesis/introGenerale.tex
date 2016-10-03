@@ -21,11 +21,11 @@ communauté de la forêt tempérée nordique dans ce contexte de changements cli
 \addcontentsline{toc}{section}{\protect\numberline{}Cadre conceptuel}
 
 Le climat exerce un contrôle dominant sur la distribution des espèces à l'échelle du paysage
-\citep{Pearson2003b}. L'étude des registres polliniques démontrent que les fluctuations climatiques
+\citep{Pearson2003b}. L'étude des registres polliniques démontre que les fluctuations climatiques
 de la période du Quaternaire ont engendré des contractions et expansions dans l'aire de distribution
 des espèces \citep{Davis2001}. Aujourd'hui, l'effet des changements climatiques est déjà notable sur
 la diversité végétale \citep{Walther2002a,Parmesan2006}. Considérant l'augmentation de température
-de 4 à 7$^\circ$C \citep[Scénario RCP 8.5]{Climatique2015} attendue pour le Québec méridional,
+de 4 à 7$^\circ$C \citep[Scénario RCP 8.5]{Climatique2015} attendu pour le Québec méridional,
 plusieurs études prédisent que des espèces de la forêt tempérée (\textit{Fagus grandifolia},
 \textit{Betula alleghaniensis}, \textit{Acer saccharum}, \textit{Quercus rubra}) vont étendre leur
 distribution vers le nord d'ici la fin du siècle \citep{Iverson2002,Sciences2014}. Cependant, ces
@@ -37,22 +37,22 @@ microconditions particulières à la forêt boréale pourraient nuire à l'étab
 nordique ne parvienne pas à s'installer en forêt boréale à la suite d’un réchauffement climatique.
 
 Les prédictions de changements de l'aire de répartition des espèces sont établies à l'aide de
-modèles dits de distribution d'espèce. Cet ensemble hétérogène d'outil statistique repose
-essentiellement sur l'établissement de corrélations entre l'occurence d'une espèce et des variables
-pédoclimatiques \citep{Pearson2003b, Guisan2005a}. Malgrè le succès de ces modèles dont témoignent
-l'abondante litérature, ils présentent certaines lacunes. Par exemple, ils postulent majoritairement
+modèles dits de distribution d'espèce. Cet ensemble hétérogène d'outils statistiques repose
+essentiellement sur l'établissement de corrélations entre l'occurrence d'une espèce et des variables
+pédoclimatiques \citep{Pearson2003b, Guisan2005a}. Malgré le succès de ces modèles dont témoigne
+l'abondante littérature, ils présentent certaines lacunes. Par exemple, ils postulent majoritairement
 que les espèces sont indépendantes et donc que les facteurs biotiques (p. ex. capacité et taux de
-dispersion, compétition inter-spécifique) n'affectent pas l'aire de répartition de l'éspèce
+dispersion, compétition interspécifique) n'affectent pas l'aire de répartition de l'espèce
 \citep{Guisan2005a,Pearson2003b}. Ils assument également que la distribution de l'espèce est en
 équilibre avec le climat et qu'elle répond de manière instantanée à des changements
 \citep{Austin2002}. Ils sont également statiques en excluant des processus écologiques tels que la
 dispersion, la succession végétale ou encore les régimes de perturbations (le feu, l'herbivorie
-etc.) \citep{Austin2002,Guisan2005a}. De part ces contraintes, les modèles de distribution d'espèces
+etc.) \citep{Austin2002,Guisan2005a}. De par ces contraintes, les modèles de distribution d'espèces
 ne sont pas appropriés pour prédire les changements d'aire de répartition des écosystèmes
 forestiers.
 
 Le modèle de diffusion de \citet{SKELLAM01061951} prédit que deux composantes sont essentielles pour
-déterminer le taux asympotique de migration d'une espèce dans un environnement homogène: la
+déterminer le taux asymptotique de migration d'une espèce dans un environnement homogène: la
 démographie (taux de croissance intrinsèque, $r$) et la capacité de dispersion ($D$) .
 \citet{Svenning2014a} mettent également en lumière l'importance des interactions biotiques comme
 troisième composante dans le processus de migration. Pour prédire l'aire de distribution de la forêt
@@ -71,8 +71,7 @@ tempéré.
 \section*{Objectifs de l'étude}
 \addcontentsline{toc}{section}{\protect\numberline{}Objectifs de l'étude}
 
-Le premier objectif de cette étude consiste à évaluer la capacité d'expansion de la forêt tempérée nordique du Québec vers le nord, d'ici la fin de ce siècle. Le deuxième objectif vise à
-étudier l'effet de la dispersion, des interactions biotiques et de la démographie sur la vitesse
+Le premier objectif de cette étude consiste à évaluer la capacité d'expansion de la forêt tempérée nordique du Québec vers le nord, d'ici la fin de ce siècle. Le deuxième objectif vise à étudier l'effet de la dispersion, des interactions biotiques et de la démographie sur la vitesse
 d'expansion (ou de contraction) de l'aire de distribution de la forêt tempérée du Québec.
 
 Pour atteindre ces objectifs, nous utilisons un modèle d'états et de transitions (\textit{States and
@@ -82,18 +81,18 @@ quatre communautés forestières distinctes, soit (B)oréale, (T)empérée, (M)�
 (R)égénération après une perturbation -- que l'on appelle des "états". Les probabilités de
 transition entre les états sont calibrées sur les transitions observées à partir des inventaires des
 parcelles forestières permanentes situées aux États-Unis et au Canada (1960-2012). En résolvant le
-système d'équation du modèle, nous pouvons prédire l'état attendu à l'équilibre avec les conditions
+système d'équations du modèle, nous pouvons prédire l'état attendu à l'équilibre avec les conditions
 climatiques. Nous avons d'abord implémenté le modèle calibré à l'intérieur d'un automate cellulaire
-afin de simuler la dynamique spatiale et temporelle de l'écotone boréal-tempéré. En utilisant le
-pire scénario de changement climatique (forcage radiatif, RCP 8.5), les simulations montrent que la
+afin de simuler la dynamique spatiale et temporelle de l'écotone boréal tempéré. En utilisant le
+pire scénario de changement climatique (forçage radiatif, RCP 8.5), les simulations montrent que la
 forêt tempérée se déplacera seulement de 14 $\pm$ 2,0 km vers le nord alors qu'un modèle d'enveloppe
 climatique prédit un déplacement de 238,79 $\pm$ 34,24 km. Les résultats des simulations mettent
 également en évidence une perte de 60\% de la superficie des peuplements mélangés en faveur des
-peuplements décidues d’ici la fin du siècle. Par conséquent, nous observons une diminution de la
+peuplements décidus d’ici la fin du siècle. Par conséquent, nous observons une diminution de la
 superficie de l'écotone en 2095. Afin de comprendre l'effet des mécanismes écologiques (c.a.d
 démographie, dispersion et interactions biotiques) limitant l'expansion de la forêt tempérée vers le
 nord, nous avons comparé les résultats de plusieurs scénarios de simulations: (i) scénario avec
-dispersion illimitée, (ii) scénario sans contrainte de démographie, (iii) résolution du modèle à
+dispersion illimitée (ii) scénario sans contrainte de démographie (iii) résolution du modèle à
 l'équilibre. La comparaison des résultats de ces simulations révèle que les interactions biotiques
 et la démographie sont les facteurs les plus importants limitant la capacité d'expansion du biome de
 la forêt tempérée vers le nord.
