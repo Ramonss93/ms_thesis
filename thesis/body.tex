@@ -211,7 +211,8 @@ Then we describe the analysis performed in 3 steps: (i) identifying the relation
 We consider a landscape made of a large number of patches that could be occupied by any of four
 vegetation types, defined by successional status and composition: Regeneration (R), Boreal (B),
 Temperate (T) and Mixed (M; figure \ref{diag}; see \emph{Classification of states} below for a
-description). 
+description). These four states summarize the clustering of species found along the first two axes
+of a Principal Component Analysis of the relative abundance of the first 25 dominant species across North-Eastern America (figure \ref{pca}).
 
 Transitions among states are represented as a stochastic process influenced by climate, ecological
 interactions and dispersal. The state of focal plot $i$ at time step $t+1$, given by $X_{t+1,i}$, is
@@ -309,7 +310,7 @@ grandifolia}, \textit{Ostrya virginiana}, and \textit{Tilia americana}) was pres
 species (\textit{Picea mariana}, \textit{Picea glauca}, \textit{Picea rubens}, \textit{Larix
 laricina}, \textit{Pinus banksiana}, \textit{Abies balsamea}, and \textit{Thuja occidentalis}) were
 present. Alternatively, the boreal state was determined by the presence of boreal species and
-absence of temperate ones. These two states composition summarize species associations based on Kendall coefficient of concordance \citep[figure \ref{}][]{legendre2012numerical}. The stand was classified as mixed if both categories of species were
+absence of temperate ones. The stand was classified as mixed if both categories of species were
 found in a stand. Based on this classification, we observed 3 910 transitions between different
 vegetation states and 45 133 non-transitions (table \ref{transmat}).
 
@@ -751,6 +752,14 @@ B & 16144 & 26.89 & 159.57 & 42.68 & -2.94 & 17.69 & 1.31 & -3.47 & 305.03 & 901
 \renewcommand{\thefigure}{S\@arabic\c@figure}
 \renewcommand{\thetable}{S\@arabic\c@figure}
 \makeatother
+
+\begin{figure}
+       \includegraphics[width=\textwidth]{figs/sp_pca.pdf}
+       \caption[Principal component analysis on the first 25 dominant species in Eastern North America]{Principal component analysis of the first 25 dominant species (in terms of the basal area) in Eastern North America. This unconstrained ordination used site/species matrix, with Hellinger transformation. Data are represented in a Euclidean space. The first axis, representing 11\% of the variance, illustrates the divergence in species composition among boreal and temperate communities.}
+       \label{pca}
+\end{figure}
+
+\clearpage
 
 \begin{landscape}
 \hfill
